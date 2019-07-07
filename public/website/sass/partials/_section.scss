@@ -1,0 +1,26 @@
+.body-padding-top {
+    padding-top: 62px;
+}
+.section {
+	padding: 5rem 0;
+	@include breakpoint($small-min) {
+		padding: 7rem 0;
+	}  
+}
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.section-header {
+	margin-bottom: 2rem;
+	.section-heading {
+		font-size: 2.75rem;
+	}
+	p {
+		font-size: 1.125rem;
+	}
+
+	@include breakpoint($small-min) {
+		margin-bottom: 5rem;
+	}
+}

@@ -1,0 +1,108 @@
+.log-body {
+    padding: 0;
+    min-height: 100%;
+}
+.log-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.log-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.log-logo {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.log-card {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #f4f4f4;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.02);
+    @include border-radius(4px);
+
+    .log-title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .form-control {
+        background-color: #f1f1f1;
+        border-color: #f1f1f1;
+        &.form-control-lg {
+            font-size: 1rem;
+        }
+    }
+    .label-log {
+        color: $color-text-lighter;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .btn-sign {
+        &.btn-lg {
+            font-size: 1rem;
+        }
+    }
+
+    .custom-file.custom-file-lg {
+        height: 2.875rem;
+        .custom-file-input.form-control-lg {
+            height: 2.875rem;
+        }
+    }
+    .custom-file.custom-file-lg .custom-file-control {
+        height: 2.875rem;
+        background-color: #f1f1f1;
+        border-color: #f1f1f1;
+    }
+    .custom-file.custom-file-lg .custom-file-control::before {
+        background-color: #fff;
+        height: 2.875rem;
+        border-color: #f1f1f1;
+    }
+}
+
+.input-phone-group {
+    position: relative;
+    .country-code {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 1.25;
+        pointer-events: none;
+        padding: .75rem 0 .75rem 1.5rem;
+        @include opacity(.85);
+    }
+    .input-phone {
+        padding-left: 4.25rem;
+    }
+}
+.has-form-control-lg {
+    .country-code {
+        padding: .75rem 0 .75rem 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+.log-card {
+    .has-form-control-lg {
+        .country-code {
+            font-size: 1rem;
+        }
+    }
+    .input-phone-group {
+        .input-phone {
+            padding-left: 3.3rem;
+        }
+    }
+}

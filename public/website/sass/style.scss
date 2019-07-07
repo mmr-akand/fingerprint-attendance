@@ -1,0 +1,38 @@
+/*
+	Heavygari
+	Author: Sk.Melon
+	version: 0.0.1
+*/
+/* BASE - Base styles, variables, mixins, etc */
+@import 'partials/functions';
+@import 'partials/hover';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/graphik';
+@import 'partials/circular';
+@import 'partials/solaimanlipi';
+@import 'partials/kumarkhaliMJ';
+@import 'partials/base';
+@import 'partials/language';
+
+@import 'partials/utilities';
+@import 'partials/components';
+@import 'partials/table';
+@import 'partials/form';
+@import 'partials/buttons';
+@import 'partials/nav';
+
+
+@import 'partials/section';
+@import 'partials/hero';
+@import 'partials/page-hero';
+@import 'partials/content';
+@import 'partials/booking';
+@import 'partials/error';
+@import 'partials/responsive';
+
+
+// PAGES
+
+@import 'partials/footer';
+

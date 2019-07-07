@@ -1,0 +1,31 @@
+.lang-english {
+	font-family: $ff-base-en;
+	h1, h2 {
+		font-family: $ff-secondary-en;
+	}
+	.steps-list .sd-title {
+		font-family: $ff-secondary-en;
+	}
+}
+.lang-bangla {
+	font-family: $ff-base-bn;
+	color: $color-text-darker;
+
+	.hero .hero-heading {
+		font-family: $ff-secondary-bn;
+	}
+	@media only screen and (min-width: 1200px) {
+		.hero .hero-heading {
+		    font-size: 3.5rem;
+		}
+	}
+
+	.card-offer, .card-featured {
+		h4 {
+			font-size: 1.5rem;
+		}
+	}
+	.how-work-list h5 {
+		color: $color-text-darker;
+	}
+}

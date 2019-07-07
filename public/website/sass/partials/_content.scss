@@ -1,0 +1,98 @@
+
+.section-home-feature {
+    padding: 7rem 0;
+}
+.main-container {
+    min-height: 80%;
+}
+.content-body {
+    padding: 4rem 0;
+}
+.page-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.text-widget {
+    p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+.featured-card {
+    margin-bottom: 1.875rem;
+    .fc-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    .fc-image {
+        margin-bottom: 0.5rem;
+    }
+    .fc-denote {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.vesel-flex {
+    position: relative;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    .vesel-image {
+        min-height: 560px;
+        @include background-variant(cover, center, no-repeat);
+    }
+
+    .vesel-content {
+        padding: 4rem;
+    }
+
+    .vesel-content-note {
+        max-width: 450px;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .section-heading {
+        font-weight: 600;
+        line-height: 1.2;
+    }
+}
+
+.feature-flex {
+    + .feature-flex {
+        border-top: 1px solid $border-color;
+    }
+
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.nav-tabs-terms {
+    margin-bottom: 2rem;
+    padding-left: 15px;
+    .nav-link {
+        color: $color-text;
+        &.active {
+            color: $color-primary;
+        }
+    }
+}
+
+.text-coming-soon-blink {
+    color: $color-primary;
+    animation: blinker 1s linear infinite;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

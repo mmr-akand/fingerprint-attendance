@@ -1,0 +1,162 @@
+//ee334d
+$color-primary:                  #F79F35 !default;
+$color-secondary:                #EB374F !default;
+$color-success:                  #5cb85c !default;
+$color-info:                     #5bc0de !default;
+$color-warning:                  #f0ad4e !default;
+$color-danger:                   #d9534f !default;
+
+$color-gray-base:                #37383c;
+$color-gray-light:               lighten($color-gray-base, 10%);
+$color-muted:                    lighten($color-gray-base, 55%);
+$color-muted-dark:               #78909c;
+
+$color-heading:                  $color-gray-base;
+$color-text:                     #888888;
+$color-text-darker:              #555555;
+
+$color-text-lighter:             #78909c;
+
+$color-linked:                   $color-primary;
+$color-linked-hover:             darken($color-linked, 15%);
+
+//$border-color:                   lighten($color-gray-base, 68%);
+$border-color:                   #e9edef;
+
+$bg-gray:                        #f1f1f1;
+
+$brand-facebook:                 #3b5998;
+$brand-google:                   #dd4b39;
+$brand-twitter:                  #00aced;
+$brand-youtube:                  #bb0000;
+$brand-linkedin:                 #007bb5;
+$brand-instagram:                #125688;
+$brand-whatsapp:                 #4dc247;
+$brand-pinterest:                #cb2027;
+$brand-flickr:                   #ff0084;
+$brand-tumblr:                   #32506d;
+$brand-vk:                       #45668e;
+
+$ff-graphik:                     'Graphik', sans-serif;
+$ff-roboto:                      'Roboto', sans-serif;
+$ff-raleway:                     'Raleway', sans-serif;
+$font-family-base:               'Circular Std Book';
+$ff-base-en:                     'Circular Std Book';
+$ff-base-bn:                     'SolaimanLipi';
+$font-size-base:                 16px;
+$font-weight-base:               normal;
+$font-color-base:                $color-gray-light;
+$line-height-base:               1.5;
+
+$ff-secondary-en:                'FreightDispBook';
+$ff-secondary-bn:                'KumarkhaliMJ';
+
+$aside-width:                    260px;
+$aside-width-small:              80px;
+
+
+$information-phone:              "only screen and (max-width : 320px)";
+
+
+
+$information-phone:              "only screen and (max-width : 320px)";
+$phone:                          '(max-width: 575px)';
+$extra-small-min:                '(min-width: 576px)';
+$extra-small-max:                '(max-width: 767px)';
+$small-min:                      '(min-width: 768px)';
+$small-max:                      '(max-width: 991px)';
+$small-only:                     '(min-width: 768px) and (max-width: 991px)';
+$medium-min:                     '(min-width: 992px)';
+$medium-max:                     '(max-width: 1199px)';
+$medium-only:                    '(min-width: 992px) and (max-width: 1199px)';
+$large-min:                      '(min-width: 1200px)';
+
+
+
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:  #000 !default;
+
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+) !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-800
+) !default;
+
+$theme-colors: (
+  primary: $color-primary,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+) !default;
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+
+
+
+
+
+
+$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
+$btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
+$btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
+
+
+
+
+
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;

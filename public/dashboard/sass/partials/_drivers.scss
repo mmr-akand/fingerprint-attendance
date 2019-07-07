@@ -1,0 +1,178 @@
+.driver-card {
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+    position: relative;
+    margin-bottom: 30px;
+    @include border-radius(0.5rem);
+    @include box-shadow(0 0 15px 10px rgba(0, 0, 0, 0.02));
+
+    .driver-avater {
+        padding: 1.25rem 1.25rem 0;
+        a {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            @include border-radius(50%);
+            img {
+                max-width: 100%;
+                height: 100%;
+                @include border-radius(50%);
+            }
+        }
+    }
+    .driver-conent {
+        padding: 1.25rem;
+    }
+    .driver-name {
+        font-size: 1.25rem;
+    }
+    .driver-sort-info {
+        position: relative;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+        display: block;
+        &:before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: $color-primary;
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            transform: translateX(-50%);
+        }
+
+        li {
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+    }
+
+    .footer-metas {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+
+        .dropdown-toggle {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+    }
+
+    &:hover {
+        @include box-shadow(0 0 20px 10px rgba(0, 0, 0, 0.03));
+    }
+}
+
+.card-driver-mandatory {
+    &.card {
+        .card-header {
+            padding-bottom: 1.5rem;
+        }
+    }
+    .dd-title {
+        margin-bottom: 0;
+    }
+    .exp-tag {
+        font-size: 0.875rem;
+        color: $color-text-lighter;
+    }
+    .dm-avater {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        @include border-radius(50%);
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.tumblr-img {
+    width: 70px;
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.2s linear;
+        transform: scale(1);
+    }
+    .ti-view {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.35);
+        font-size: 1.5rem;
+        color: #fff;
+        @include opacity(0);
+        transition: opacity 0.2s linear;
+
+    }
+    &:hover, &:focus {
+        .ti-view {@include opacity(1);}
+        img {
+            transform: scale(1.5);
+        }
+    }
+}
+
+.driver-description {
+    .dd-item {
+        padding: 0.5rem 0;
+        .dd-name {
+            color: $color-text-lighter;
+        }
+    }
+}
+
+.review-lists {
+    margin: 0;
+    padding: 2rem 0 0;
+    list-style: none;
+
+    li {
+        padding: 1.5rem 2rem;
+        border-top: 1px dashed $border-color;
+    }
+    img {
+        width: 45px;
+        margin-right: 1rem;
+        @include border-radius(50%);
+    }
+    .review-item {
+        display: flex;
+    }
+    .post-text {
+        line-height: 1.3;
+    }
+    .post-meta {
+        padding-top: 0.250rem;
+        font-size: 0.750rem;
+        font-weight: 500;
+        letter-spacing: 0.03rem;
+        text-transform: uppercase;
+        color: $color-text-lighter;
+        margin: 0 -0.250rem;
+        span {
+            display: inline-block;
+            margin-left: 0.250rem;
+            margin-right: 0.250rem;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@media (min-width: 768px) {
+	.search-box-mobile, .btn-search-mobile, .notification-mobile {
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.wagon-huge {
+	    .wagon-header {
+	        padding: 4rem 4rem 0;
+	    }
+	    .wagon-body {
+	        padding: 4rem;
+	    }
+	}
+}
+@media (max-width: 767px) {
+	.confrim-list { 
+		li {
+			display: flex;
+    		flex-direction: column;
+    		padding: .5rem 1rem;
+    		background-color: #f6f6f7;
+			span {
+				background-color: transparent !important;
+				padding: 0;
+				border-radius: 0 !important;
+				&:first-child {
+					flex: 0 0 100%;
+    				max-width: 100%;
+    				border-radius: 0;
+				}
+			}
+			span {
+				&:last-child {
+					flex: 0 0 100%;
+    				max-width: 100%;
+    				border-radius: 0;
+    				font-weight: bold;
+				}
+			}
+			&:nth-child(2n + 2) {
+				background-color: #eceeef;
+			}
+		}
+	}
+
+	.input-flex {
+		&.input-flex-on-mobile {
+			.input-group-addon {
+				width: 100%;
+			}
+			select, .select2-container, .select2 {
+				width: 100% !important;
+			}
+		}
+	}
+}

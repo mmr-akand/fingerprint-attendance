@@ -1,0 +1,158 @@
+.navbar {
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	@include box-shadow(0 5px 20px rgba(0, 0, 0, 0.12));
+
+	.navbar-nav-admin {
+		.dropdown-toggle {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.-has-avater {
+		img {
+			width: 28px;
+			height: 28px;
+			vertical-align: middle;
+			object-fit: cover;
+			@include border-radius(4px);
+			margin-right: .25rem;
+		}
+	}
+}
+
+.bg-light {
+	background-color: #fff !important;
+	.navbar-nav {
+		.nav-link {
+			color: $color-heading;
+			&:hover {
+				color: $color-primary;
+			}
+			&.active {
+				color: $color-primary;
+			}
+		}
+		.primary-gradient, .btn-primary {
+			color: #fff;
+		}
+	}
+}
+
+.navbar {
+	.nav-link {
+		font-size: 14px;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: .063rem;
+
+		@include breakpoint($extra-small-max) {
+			text-align: center;
+		}
+	}
+	.nav-link-languge {
+		position: relative;
+		width: 30px;
+		height: 38px;
+		font-size: 26px;
+		i {
+			position: absolute;
+			top: 8px;
+			line-height: 1;
+		}
+	}
+	.nav-item-languge {
+		padding-left: 5px;
+		@include breakpoint($small-max) {
+			display: none;
+		}
+	}
+
+	.container {
+		@include breakpoint($small-max) {
+			position: relative;
+		}
+	}
+}
+
+.language-bar {
+	position: fixed;
+	right: 15px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	li {
+
+	}
+	a {
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		padding: .25rem .5rem;
+		display: block;
+		background-color: #f6f6f7;
+		color: $color-heading;
+	}
+	li {
+		&:first-child {
+			a {
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+			}
+		}
+		&:last-child {
+			a {
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+		}
+	}
+	.active {
+		a {
+			background-color: $color-primary;
+			color: #fff;
+		}
+	}
+}
+
+.dropdown {
+	&.dropdown-language-nav {
+		position: absolute;
+		top: 1px;
+		right: 55px;
+		.dropdown-toggle {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 38px;
+			font-size: 26px;
+			color: $color-text;
+			&:after {
+				display: none;
+			}
+			i {
+				position: absolute;
+				top: 8px;
+				line-height: 1;
+			}
+		}
+		.dropdown-menu-right {
+			left: auto;
+			right: 0;
+		}
+		.dropdown-item {
+			&:active, &.active {
+				background-color: $color-primary
+			}
+		}
+
+		@include breakpoint($medium-min) {
+			display: none;
+		}
+	}
+}
+

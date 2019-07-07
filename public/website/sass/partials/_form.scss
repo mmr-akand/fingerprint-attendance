@@ -1,0 +1,17 @@
+
+.input-group {
+    .input-group-addon {
+        border-color: $border-color;
+    }
+}
+
+.form-control {
+    border-color: $border-color;
+    &.like-field[readonly] {
+        background-color: transparent;
+    }
+    &:focus {
+        border-color: $color-primary;
+        @include box-shadow(none);
+    }
+}

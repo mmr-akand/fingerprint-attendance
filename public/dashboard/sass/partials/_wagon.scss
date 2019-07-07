@@ -1,0 +1,47 @@
+
+.wagon {
+    background-color: #fff;
+    .wh-title {
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $color-primary;
+    }
+
+    .wh-meta {
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .wagon-header {
+        padding: 1.25rem 1.25rem 0;
+        display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .wagon-body {
+        padding: 1.25rem;
+    }
+}
+
+
+.wagon-borderd-solid {
+    @extend .wagon;
+    border: 1px solid $border-color;
+    .wagon-header {
+
+    }
+}
+.wagon-borderd-dashed {
+    @extend .wagon-borderd-solid;
+    border-style: dashed;
+}

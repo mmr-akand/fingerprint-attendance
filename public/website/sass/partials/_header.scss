@@ -1,0 +1,48 @@
+.header {
+	&.header-absolute {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		display: block;
+		z-index: 1012;
+	}
+}
+
+.header-meta-navbar {
+	.nav {
+		> li {
+			> a {
+				font-size: 14px;
+				font-weight: 600;
+				color: white;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.navbar-meta {
+	background-color: white;
+	.nav-meta {
+		margin-bottom: 0;
+		li {
+			a {
+				font-size: 14px;
+				color: $color-text;
+				display: inline-block;
+				padding: 7px 0;
+			}
+		}
+	}
+	&.navbar-meta-inverse {
+		background-color: darken($color-primary, 5%);
+		.nav-meta {
+			li {
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+}

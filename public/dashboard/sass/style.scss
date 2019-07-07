@@ -1,0 +1,38 @@
+/*
+	Heavygari
+	Author: Sk.Melon
+	version: 0.0.1
+*/
+/* BASE - Base styles, variables, mixins, etc */
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/base';
+@import 'partials/graphik';
+@import 'partials/utilities';
+@import 'partials/grid';
+@import 'partials/components';
+@import 'partials/form';
+@import 'partials/wagon';
+@import 'partials/buttons';
+@import 'partials/nav';
+@import 'partials/aside';
+@import 'partials/card';
+
+@import 'partials/vehicles';
+@import 'partials/vehicle-details';
+@import 'partials/dashboard';
+@import 'partials/content';
+@import 'partials/pages';
+@import 'partials/booking';
+@import 'partials/drivers';
+@import 'partials/invoice';
+@import 'partials/transaction';
+@import 'partials/404';
+@import 'partials/log';
+
+
+
+// PAGES
+
+@import 'partials/footer';
+@import 'partials/responsive';

@@ -1,0 +1,217 @@
+
+// Button variant shorthand
+@mixin base-button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+
+	&.disabled,
+	&:disabled {
+		background-color: $background;
+		border-color: $border;
+	}
+
+	&:focus,
+	&.focus, 
+	&.active {
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 10%);
+	}
+	&:hover {
+		color: $color;
+		background-color: darken($background, 10%);
+	    border-color: darken($border, 10%);
+	}
+}
+
+@mixin base-button-outline-variant($color, $border) {
+	color: $color;
+	background-image: none;
+	background-color: transparent;
+	border-color: $border;
+
+	&:focus,
+	&.focus {
+		background-color: $color;
+		color: #fff;
+	}
+	&:hover {
+		background-color: $color;
+		color: #fff;
+	}
+}
+
+
+// Opacity shorthand
+@mixin opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+// Font variant shorthand
+@mixin base-font-variant($family, $size, $weight, $color, $line-height) {
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	line-height: $line-height;
+}
+
+// Backgrond variant shorthand
+@mixin background-variant($size, $position, $repeat) {
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	background-size: $size;
+	background-position: $position;
+	background-repeat: $repeat;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
+// Border radius shorthand
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Box-shadow shorthand
+@mixin box-shadow($shadow...) {
+	-webkit-box-shadow: $shadow;
+	   -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
+}
+
+// Placeholder shorthand
+@mixin placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin selection {
+	& ::selection {
+		@content;
+	}
+	& ::-moz-selection {
+		@content;
+	}
+}
+
+// Transitions shorthand
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-property($transition-property...) {
+  -webkit-transition-property: $transition-property;
+          transition-property: $transition-property;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+          transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration...) {
+  -webkit-transition-duration: $transition-duration;
+          transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($timing-function) {
+  -webkit-transition-timing-function: $timing-function;
+          transition-timing-function: $timing-function;
+}
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+     -moz-transition: -moz-transform $transition;
+       -o-transition: -o-transform $transition;
+          transition: transform $transition;
+}
+
+
+
+// Transform shorthand
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+@mixin scale3d($scale) {
+	@include transform(scale3d($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+@mixin translateX ($x) {
+	@include transform(translateX($x));
+}
+@mixin translateY ($y) {
+	@include transform(translateY($y));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+// filter shorthand
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+
+// Media query shorthand
+@mixin breakpoint($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
+
+
+
+
+@mixin gradient-vertical($start-color: $color-secondary, $end-color: $color-primary, $start-percent: 0%, $end-percent: 80%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+@mixin gradient-vertical-four-colors($color-one: rgba(0, 0, 0, 0), $color-one-stop: 0px, $color-two: rgba(0, 0, 0, 0.1), $color-two-stop: 20%, $color-three: rgba(0, 0, 0, 0.6), $color-three-stop: 60%, $color-four: rgba(0, 0, 0, 0.9), $color-four-stop: 100%) {
+	background-image: -webkit-linear-gradient(top, $color-one $color-one-stop, $color-two $color-two-stop, $color-three $color-three-stop, $color-four $color-four-stop);
+	background-image: -o-linear-gradient(top, $color-one $color-one-stop, $color-two $color-two-stop, $color-three $color-three-stop, $color-four $color-four-stop);
+	background-image: linear-gradient(to bottom, $color-one $color-one-stop, $color-two $color-two-stop, $color-three $color-three-stop, $color-four $color-four-stop);
+}

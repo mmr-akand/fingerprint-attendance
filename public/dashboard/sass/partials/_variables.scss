@@ -1,0 +1,64 @@
+//ee334d
+$color-primary:                  #FAA435;
+$color-secondary:                #faa334;
+$color-success:                  #5cb85c;
+$color-info:                     #5bc0de;
+$color-warning:                  #f0ad4e;
+$color-danger:                   #d9534f;
+
+$color-gray-base:                #37383c;
+$color-gray-light:               lighten($color-gray-base, 10%);
+$color-muted:                    lighten($color-gray-base, 55%);
+$color-muted-dark:               #78909c;
+
+$color-title:                    $color-gray-base;
+$color-text:                     $color-gray-light;
+$color-text-lighter:             #78909c;
+
+$color-linked:                   $color-primary;
+$color-linked-hover:             darken($color-linked, 15%);
+
+//$border-color:                   lighten($color-gray-base, 68%);
+$border-color:                   #e9edef;
+
+$white: #ffffff;
+$black: #ffffff;
+
+$bg-gray:                        #f1f1f1;
+$bg-babble: 					 #f6f6f7;
+$thead-bg: 						 #556f7a;
+
+$brand-facebook:                 #3b5998;
+$brand-google:                   #dd4b39;
+$brand-twitter:                  #00aced;
+$brand-youtube:                  #bb0000;
+$brand-linkedin:                 #007bb5;
+$brand-instagram:                #125688;
+$brand-whatsapp:                 #4dc247;
+$brand-pinterest:                #cb2027;
+$brand-flickr:                   #ff0084;
+$brand-tumblr:                   #32506d;
+$brand-vk:                       #45668e;
+
+$ff-graphik:                     'Graphik', sans-serif;
+$font-family-base:               'Roboto', sans-serif;
+$font-size-base:                 16px;
+$font-weight-base:               normal;
+$font-color-base:                $color-gray-light;
+$line-height-base:               1.5;
+
+$aside-width:                    260px;
+$aside-width-small:              80px;
+
+
+$information-phone:              "only screen and (max-width : 320px)";
+$phone:                          '(max-width: 575px)';
+$extra-small-min:                '(min-width: 576px)';
+$extra-small-max:                '(max-width: 767px)';
+$small-min:                      '(min-width: 768px)';
+$small-max:                      '(max-width: 991px)';
+$small-only:                     '(min-width: 768px) and (max-width: 991px)';
+$medium-min:                     '(min-width: 992px)';
+$medium-max:                     '(max-width: 1199px)';
+$medium-only:                    '(min-width: 992px) and (max-width: 1199px)';
+$large-min:                      '(min-width: 1200px)';

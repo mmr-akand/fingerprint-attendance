@@ -1,0 +1,145 @@
+@media (max-width: 414px) {
+	.image-wrap{
+		margin-top: 10px;
+	}
+	.hero-form-list li{
+		margin-bottom: -5px;
+	}
+	.feature-margin{
+		margin-right: -15px;
+	}
+	.feature-padding{
+		padding-left: 3px;
+	}
+	.feature-padding-left{
+		padding-left:91px;
+	}
+	a>img.img-width {
+		width: 66px;
+	}
+	div.padding-top-feature{
+		margin-top:-43px;
+	}
+	.btn-signup{
+		margin-top:5px;
+	}
+	.btn-signin:hover{
+		background-color: #e64d60;
+		color:white;
+	}
+	.btn-signup-choose:hover{
+		background-color: #f87b8b;
+		color:white;
+	}
+	.dropdown-signup{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.dropdown-signup-menu:hover{
+		border-radius: 3px;
+	}
+	.dropdown-signup-menu{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.english{
+	font-family: 'Roboto Slab', serif;
+	font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;	
+	}
+
+}
+
+@media (max-width: 575px) {
+	.hero-form {
+		position: relative !important;
+		padding: 20px 15px !important;
+	}
+	.step-denote > .sd-title {
+		line-height: 1.1 !important;
+	}
+	.feature-padding{
+		padding-left: 3px;
+	}
+	.btn-signup{
+		margin-top:5px;
+	}
+	.btn-signin:hover{
+		background-color: #e64d60;
+		color:white;
+	}
+	.btn-signup-choose:hover{
+		background-color: #f87b8b ;
+		color:white;
+	}
+	.dropdown-signup{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.dropdown-signup-menu:hover{
+		border-radius: 3px;
+	}
+	.dropdown-signup-menu{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.english{
+	font-family: 'Roboto Slab', serif;
+	font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;	
+	}
+}
+
+@media (min-width: 768px) {
+	.hero {
+		height: 100%;
+	}
+	.feature-margin{
+		margin-right: -22px;
+	}
+	.feature-padding{
+		padding-left: 3px;
+	}
+	.feature-padding-top{
+		padding-top: 7px;
+	}
+	.feature-padding-left{
+		padding-left:91px;
+	}
+	.email-footer{
+		margin-left: -81px;
+	}
+	.email-footer-space{
+		padding-top:10px;
+	}
+	.btn-signin{
+		margin-right: 5px;
+		color:white;
+	}
+	.btn-signin:hover{
+		background-color: #e64d60;
+	}
+	.btn-signup-choose:hover{
+		background-color: #f87b8b ;
+		color:white;
+	}
+	.dropdown-signup{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.dropdown-signup-menu:hover{
+		border-radius: 3px;
+	}
+	.dropdown-signup-menu{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.english{
+	font-family: 'Roboto Slab', serif;
+	font-size: 60px;
+    font-weight: 400;
+    line-height: 1.5;	
+	}
+}

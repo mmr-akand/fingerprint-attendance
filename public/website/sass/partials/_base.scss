@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+}
+body {
+    background: #fff;
+    color: $color-text;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-gray-base;
+}
+
+
+a {
+  color: $color-linked;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $color-linked-hover;
+  }
+}

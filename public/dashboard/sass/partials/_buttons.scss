@@ -1,0 +1,107 @@
+
+/* BUTTON */
+.btn {
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: #eee;
+    text-decoration: none;
+  }
+
+  &.btn-square {
+    @include border-radius(0);
+  }
+  &.btn-round {
+    @include border-radius(10em);
+  }
+
+}
+
+.btn-small {
+  font-size: $font-size-base - 2px;
+  padding: 3px 12px;
+}
+
+.btn-only-icon {
+    @extend .btn;
+    min-width: 2.188rem;
+    min-height: 2.188rem;
+    line-height: 2.188rem;
+    padding: 0;
+}
+.btn-secondary-site {
+	@include base-button-variant(#fff, $color-secondary, $color-secondary);
+}
+
+
+.btn-primary {
+	@include base-button-variant(#fff, $color-primary, $color-primary);
+}
+.btn-success {
+	@include base-button-variant(#fff, $color-success, $color-success);
+}
+.btn-info {
+	@include base-button-variant(#fff, $color-info, $color-info);
+}
+.btn-warning {
+	@include base-button-variant(#fff, $color-warning, $color-warning);
+}
+.btn-danger {
+	@include base-button-variant(#fff, $color-danger, $color-danger);
+}
+.btn-white {
+  @include base-button-variant(#333, #fff, #fff);
+}
+
+.btn-gray {
+  @include base-button-variant($color-text-lighter, #F3F5F6, #F3F5F6);
+}
+
+.btn-facebook {
+  @include base-button-variant(#fff, $brand-facebook, $brand-facebook);
+}
+.btn-twitter {
+  @include base-button-variant(#fff, $brand-twitter, $brand-twitter);
+}
+.btn-linkedin {
+  @include base-button-variant(#fff, $brand-linkedin, $brand-linkedin);
+}
+
+.btn-stroked {
+  &.btn-primary {
+    @include base-button-variant($color-primary, transparent, $color-primary);
+  }
+  &.btn-success {
+    @include base-button-variant($color-success, transparent, $color-success);
+  }
+  &.btn-info {
+    @include base-button-variant($color-info, transparent, $color-info);
+  }
+  &.btn-warning {
+    @include base-button-variant($color-warning, transparent, $color-warning);
+  }
+  &.btn-danger {
+    @include base-button-variant($color-danger, transparent, $color-danger);
+  }
+  &.btn-white {
+    @include base-button-variant(#333, transparent, #fff);
+  }
+
+  &.btn-facebook {
+    @include base-button-variant($brand-facebook, transparent, $brand-facebook);
+  }
+}
+
+.on-dark {
+    &.btn-white {
+        color: #fff;
+    }
+}

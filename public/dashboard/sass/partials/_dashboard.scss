@@ -1,0 +1,24 @@
+.main-content {
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+.main-content-inner {
+    padding: 15px;
+    @include breakpoint($medium-min) {
+        padding: 40px;
+        padding-bottom: 70px;
+    }
+}
+.aside-navbar-uncollapse {
+    .main-content {
+        margin-left: $aside-width;
+    }
+}
+.aside-navbar-collapse {
+    .main-content {
+        @media (min-width: 768px) {
+            margin-left: $aside-width-small;
+        }
+    }
+}

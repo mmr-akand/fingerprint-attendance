@@ -1,0 +1,246 @@
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+	@include border-radius(0);
+	transition: all 0.3s linear;
+
+	&.navbar-base {
+		background-color: #fff;
+		padding: 0;
+	}
+
+	@media (max-width: 767px) {
+		@include box-shadow(0 0 20px rgba(0, 0, 0, 0.1));
+	}
+}
+
+
+
+
+.navbar {
+	.navbar-header {
+		height: 60px;
+		.navbar-brand {
+			margin-right: 0;
+			padding: 0.5rem 1rem;
+			img {
+				max-height: 100%;
+				width: auto;
+			}
+		}
+
+		.navbar-toggle {
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+		.nav-toggle-btn {
+			&.btn {
+				padding: 0;
+				background-color: transparent;
+			}
+			&.nav-more-toggle-btn {
+				font-size: 1.5rem;
+			}
+		}
+
+		@media (max-width: 767px) {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			justify-content: space-between;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			  -ms-flex-direction: row;
+			      flex-direction: row;
+			-webkit-box-align: center;
+			  -ms-flex-align: center;
+			      align-items: center;
+			padding: 0.5rem 15px;
+
+			.navbar-brand {
+				margin: auto;
+			}
+
+			.nav-toggle-btn {
+				&.btn {
+
+				}
+			}
+			.nav-more-toggle-btn {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.navbar-base {
+	.navbar-collapse {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+}
+
+.navbar-collapse-mobile-row {
+	border-top: 1px solid #f1f1f1;
+	.nav-link {
+		padding: 1em;
+	}
+}
+
+
+.aside-navbar-uncollapse {
+	.navbar-header {
+		@media (min-width: 768px) {
+			display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -ms-flex-negative: 0;
+			      flex-shrink: 0;
+			width: $aside-width;
+			text-align: center;
+		}
+	}
+}
+.aside-navbar-collapse {
+	.navbar-header {
+		@media (min-width: 768px) {
+			display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -ms-flex-negative: 0;
+			      flex-shrink: 0;
+			width: $aside-width-small;
+			text-align: center;
+		}
+	}
+}
+
+@include breakpoint($extra-small-max) {
+	.navbar {
+		&.-is-mobile {
+			.navbar-collapse {
+				display: none !important;
+			}
+			.navbar-header {
+				width: 100%;
+				flex-basis: 100%;
+			}
+			.-collapse-mobile {
+				width: 100%;
+				flex-basis: 100%;
+			}
+		}
+	}
+	.aside-navbar-header {
+		display: none !important;
+	}
+
+}
+
+.navbar-header-actions {
+	display: flex;
+	align-items: center;
+
+	.btn-search-mobile {
+		padding: 0;
+		background-color: #fff;
+		border-radius: 0;
+		margin-right: 12px;
+
+	}
+}
+
+.search-box-mobile {
+	padding: 10px 40px 10px 10px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: all .25s ease-in-out;
+
+	&.open {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.btn-searchbox-close {
+		line-height: 1;
+		padding: 0;
+		background-color: #fff;
+		border-radius: 0;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.notification-mobile {
+	margin-right: 12px;
+	position: static;
+	.btn-notification {
+		padding: 0;
+		background-color: #fff;
+		border-radius: 0;
+		&:after {
+			display: none;
+		}
+	}
+	.dropdown-menu {
+		width: 100%;
+		border-radius: 0;
+		margin-top: 0;
+		max-height: 340px;
+		overflow-y: scroll;
+		border: 0;
+		box-shadow: 0 15px 20px rgba(#000, .1)
+	}
+	.dropdown-menu-right {
+		left: auto;
+		right: 0;
+	}
+}
+
+.dropdown-notification {
+	.dropdown-toggle {
+		&:after {
+			display: none;
+		}
+	}
+	.dropdown-menu {
+		min-width: 320px;
+		max-height: 450px;
+		box-shadow: 0 15px 20px rgba(#000, .1);
+		overflow-y: scroll;
+	}
+}
+.notification-item {
+	padding: .75rem 1rem;
+	border-bottom: 1px solid $border-color;
+	transition: all .25s linear;
+
+	.notification-title {
+		font-weight: bold;
+		margin-bottom: .25rem;
+	}
+	.notification-note {
+		font-size: 85%;
+		color: $color-text;
+	}
+
+	&.--unread {
+		background-color: rgba($color-primary, .05);
+		.notification-title {
+			color: $color-primary;
+		}
+	}
+
+	&:hover {
+		background-color: #f1f1f1;
+	}
+}
+

@@ -1,0 +1,25 @@
+.table-invoice-details {
+	&.table {
+		tfoot {
+			tr {
+				td {
+					border-top: 3px solid $border-color;
+				}
+			}
+		}
+	}
+}
+
+.table-invoice-meta {
+	&.table {
+		tr {
+			td {
+				border: 0;
+			}
+		}
+	}
+}
+
+.al-paid-block {
+	display: none;
+}
