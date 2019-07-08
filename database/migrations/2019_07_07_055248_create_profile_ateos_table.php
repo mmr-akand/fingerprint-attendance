@@ -17,12 +17,16 @@ class CreateProfileAteosTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('upazila_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('profile_dpeo_id')->unsigned()->nullable();
+            $table->bigInteger('profile_adpeo_id')->unsigned()->nullable();
             $table->bigInteger('profile_teo_id')->unsigned()->nullable();
             $table->string('about')->nullable();
             $table->timestamps();
 
             $table->foreign('upazila_id')->references('id')->on('upazilas')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('profile_dpeo_id')->references('id')->on('profile_dpeos')->onDelete('set null');
+            $table->foreign('profile_adpeo_id')->references('id')->on('profile_adpeos')->onDelete('set null');
             $table->foreign('profile_teo_id')->references('id')->on('profile_teos')->onDelete('set null');
         });
     }

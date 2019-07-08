@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProfileTeachersTable extends Migration
+class CreateProfileDpeosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateProfileTeachersTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile_teachers', function (Blueprint $table) {
+        Schema::create('profile_dpeos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('district_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('school_id')->unsigned();
-            $table->string('is_head_teacher')->nullable();
             $table->string('about')->nullable();
             $table->timestamps();
 
-            $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
+            $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -33,6 +32,6 @@ class CreateProfileTeachersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile_teachers');
+        Schema::dropIfExists('profile_dpeos');
     }
 }

@@ -16,11 +16,13 @@ class CreateProfileSchoolsTable extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('upazila_id')->unsigned();
+            $table->bigInteger('profile_teo_id')->unsigned()->nullable();
             $table->bigInteger('profile_ateo_id')->unsigned()->nullable();
             $table->string('name')->nullable();
             $table->timestamps();
 
             $table->foreign('upazila_id')->references('id')->on('upazilas')->onDelete('cascade');
+            $table->foreign('profile_teo_id')->references('id')->on('profile_teos')->onDelete('set null');
             $table->foreign('profile_ateo_id')->references('id')->on('profile_ateos')->onDelete('set null');
         });
     }
