@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#ffffff">
 
 
-    <title>Attendance System</title>
+    <title>Test System</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -39,7 +39,7 @@
     <div class="log-wrap">
         <div class="log-container">
             <div class="log-logo">
-                <a href="/"><img src="/dashboard/images/logo.png" class="d-inline-block align-middle logo-large" alt="..." width="100"></a>
+                <!-- <a href="/"><img src="/dashboard/images/logo.png" class="d-inline-block align-middle logo-large" alt="..." width="100"></a> -->
             </div>
 
             @if(session('message'))

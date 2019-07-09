@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProfileAdpeo extends Model
+class AdpeoProfile extends Model
 {
     protected $table = 'profile_adpeos';
 
@@ -16,4 +16,10 @@ class ProfileAdpeo extends Model
     protected $fillable = [
         'district_id', 'user_id', 'profile_dpeo_id', 'about', 
     ];
+
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }

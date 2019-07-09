@@ -3,10 +3,10 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+//use Illuminate\Foundation\Auth\User as Authenticatable;
+use Cartalyst\Sentinel\Users\EloquentUser as SentinelUser;
 
-class User extends Authenticatable
+class User extends SentinelUser
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone', 'status'
     ];
 
     /**
@@ -33,7 +33,38 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+    protected $loginNames = [
+        'phone', 'email'
     ];
+
+
+    public function adminProfile()
+    {
+        return $this->hasOne('App\AdminProfile');
+    }
+
+    public function dpeoProfile()
+    {
+        return $this->hasOne('App\DpeoProfile');
+    }
+
+    public function adpeoProfile()
+    {
+        return $this->hasOne('App\AdpeoProfile');
+    }
+
+    public function teoProfile()
+    {
+        return $this->hasOne('App\TeoProfile');
+    }
+
+    public function ateoProfile()
+    {
+        return $this->hasOne('App\AteoProfile');
+    }
+
+    public function teacherProfile()
+    {
+        return $this->hasOne('App\TeacherProfile');
+    }
 }
