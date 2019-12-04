@@ -12,6 +12,13 @@ class SessionController extends Controller
 {
     public function create()
     {
+        $user = Sentinel::getUser();
+
+        if($user){
+            $dashboard = $this->getUserDashboard($user);
+            return redirect($dashboard);
+        }
+
     	return view('auth.login');
     }
 
@@ -74,7 +81,7 @@ class SessionController extends Controller
         $teacherRole = Sentinel::findRoleBySlug('teacher');
 
         if ($user->inRole($adminRole)) {
-            $dashboard = 'admin/dashboard';
+            $dashboard = 'admin/panel/dashboard';
         } elseif ($user->inRole($dpeoRole)) {
             $dashboard = 'dpeo/panel/dashboard';
         } elseif ($user->inRole($adpeoRole)) {

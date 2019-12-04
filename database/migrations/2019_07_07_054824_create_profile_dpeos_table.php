@@ -15,8 +15,8 @@ class CreateProfileDpeosTable extends Migration
     {
         Schema::create('profile_dpeos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('district_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('district_id')->unsigned();
             $table->string('about')->nullable();
             $table->timestamps();
 

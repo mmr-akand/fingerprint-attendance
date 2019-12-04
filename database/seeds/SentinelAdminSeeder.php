@@ -12,8 +12,6 @@ class SentinelAdminSeeder extends Seeder
      */
     public function run()
     {
-        //DB::table('users')->delete();
-
         $adminUser = Sentinel::registerAndActivate([
             'id' => '1',
             'email'    => 'admin@admin.com',

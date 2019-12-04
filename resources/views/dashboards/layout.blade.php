@@ -9,21 +9,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>হেভিগাড়ী</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="/website/images/favicon/apple-icon-57x57.png"> 
-    <link rel="apple-touch-icon" sizes="60x60" href="/website/images/favicon/apple-icon-60x60.png"> 
-    <link rel="apple-touch-icon" sizes="72x72" href="/website/images/favicon/apple-icon-72x72.png"> 
-    <link rel="apple-touch-icon" sizes="76x76" href="/website/images/favicon/apple-icon-76x76.png"> 
-    <link rel="apple-touch-icon" sizes="114x114" href="/website/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/website/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/website/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/website/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/website/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/website/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/website/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/website/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/website/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/website/images/favicon/manifest.json">
+    <title>Attendance Management</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> 
     <meta name="msapplication-TileColor" content="#ffffff"> 
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"> 
@@ -63,7 +50,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="index.html">
-                <img src="{{URL::asset('dashboard/images/logo.png')}}" height="28" class="d-inline-block align-middle" alt="...">
+                <span>Attendance Management</span>
             </a>
             <div class="navbar-header-actions">   
                 <button type="button" class="btn nav-toggle-btn nav-more-toggle-btn d-block d-md-none" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false" aria-controls="navbar-collapse-mobile">
@@ -75,13 +62,13 @@
             <div class="navbar-collapse-mobile-row">
                 <ul class="nav flex-column text-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">abcd</a>
+                        <a class="nav-link active" href="#">{{ Sentinel::getUser()->name}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">abcc</a>                    
+                        <a class="nav-link" href="#">{{ Sentinel::getUser()->phone}}</a>                    
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/session/logout">লগ আউট</a>
+                        <a class="nav-link" href="/session/logout">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -101,10 +88,10 @@
                     <a class="nav-link nav-link-mail" href="#"><i class="icofont icofont-user-alt-3"></i></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">cccc</a>
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Sentinel::getUser()->name}}</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="nav-link booking-cards" href="#">dddd</a>
-                        <a class="nav-link booking-cards" href="/session/logout">লগ আউট</a>
+                        <a class="nav-link booking-cards" href="#">{{ Sentinel::getUser()->phone}}</a>
+                        <a class="nav-link booking-cards" href="/session/logout">Log Out</a>
                     </div>
                 </li>
             </ul>
@@ -114,8 +101,8 @@
     <aside class="aside-navbar aside-scrollable">
         <div class="aside-navbar-header hidden-sm-down">
             <a class="navbar-brand" href="/">
-                <img src="{{URL::asset('dashboard/images/logo.png')}}" width="120" class="d-inline-block align-middle logo-large" alt="...">
-                <img src="{{URL::asset('dashboard/images/logo.png')}}" width="60" class="d-inline-block align-middle logo-small" alt="...">
+                <span width="120" class="d-inline-block align-middle logo-large" alt="...">Attendance Management</span>
+                <span width="60" class="d-inline-block align-middle logo-small" alt="...">Attendance Management</span>
             </a>
         </div>
         <div class="aside-navbar-body">
@@ -153,13 +140,7 @@
         <footer class="footer container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <span class="copyright">কপিরাইট হেভিগাড়ী ২০১৮ দ্বারা সর্বস্বত্ব সংরক্ষিত</span>
-                </div>
-                <div class="col-md-6 text-md-right">
-                    <ul class="list-inline foo-nav">
-                      <li class="list-inline-item"><a href="/page/toc">ব্যবহারের শর্তাবলী </a></li>
-                      <li class="list-inline-item"><a href="/page/privacy-policy">গোপনীয়তা </a></li>
-                    </ul>
+                    <span class="copyright">Copyright is reserved by Boda upazila, Panchagarh.</span>
                 </div>
             </div>
         </footer>

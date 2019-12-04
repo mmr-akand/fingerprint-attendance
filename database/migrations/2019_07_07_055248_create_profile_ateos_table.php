@@ -15,8 +15,8 @@ class CreateProfileAteosTable extends Migration
     {
         Schema::create('profile_ateos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('upazila_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('upazila_id')->unsigned();
             $table->bigInteger('profile_dpeo_id')->unsigned()->nullable();
             $table->bigInteger('profile_adpeo_id')->unsigned()->nullable();
             $table->bigInteger('profile_teo_id')->unsigned()->nullable();

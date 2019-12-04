@@ -15,8 +15,8 @@ class CreateProfileDistrictsTable extends Migration
     {
         Schema::create('districts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('division_id')->unsigned();
             $table->string('name');
+            $table->bigInteger('division_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('division_id')->references('id')->on('divisions')->onDelete('cascade');

@@ -15,8 +15,8 @@ class CreateProfileUpazilasTable extends Migration
     {
         Schema::create('upazilas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('district_id')->unsigned();
             $table->string('name')->nullable();
+            $table->bigInteger('district_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');

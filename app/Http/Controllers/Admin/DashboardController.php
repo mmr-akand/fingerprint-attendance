@@ -9,6 +9,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-    	dd("this is admin dashboard");
+    	$data = [
+    		'title' => 'Dashboard',
+    	];
+
+    	return view("admin.dashboard", $data);
     }
 }
