@@ -14,9 +14,10 @@ class CreateProfileDivisionsTable extends Migration
     public function up()
     {
         Schema::create('divisions', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name')->nullable();
-            $table->timestamps();
+            $table->timestamps();            
+            $table->softDeletes();
         });
     }
 

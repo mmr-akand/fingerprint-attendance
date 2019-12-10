@@ -16,4 +16,9 @@ class School extends Model
     protected $fillable = [
         'upazila_id', 'profile_teo_id', 'profile_ateo_id', 'name',
     ];
+
+    public function teachers()
+    {
+        return $this->hasMany('App\TeacherProfile');
+    }
 }

@@ -22,4 +22,9 @@ class TeoProfile extends Model
     {
         return $this->belongsTo('App\User', 'user_id');
     }
+
+    public function upazila()
+    {
+        return $this->belongsTo('App\Upazila');
+    }
 }

@@ -14,12 +14,13 @@ class CreateProfileSchoolsTable extends Migration
     public function up()
     {
         Schema::create('schools', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name')->nullable();
-            $table->bigInteger('upazila_id')->unsigned();
-            $table->bigInteger('profile_teo_id')->unsigned()->nullable();
-            $table->bigInteger('profile_ateo_id')->unsigned()->nullable();
-            $table->timestamps();
+            $table->integer('upazila_id')->unsigned();
+            $table->integer('profile_teo_id')->unsigned()->nullable();
+            $table->integer('profile_ateo_id')->unsigned()->nullable();
+            $table->timestamps();            
+            $table->softDeletes();
 
             $table->foreign('upazila_id')->references('id')->on('upazilas')->onDelete('cascade');
             $table->foreign('profile_teo_id')->references('id')->on('profile_teos')->onDelete('set null');

@@ -14,12 +14,13 @@ class CreateProfileAdpeosTable extends Migration
     public function up()
     {
         Schema::create('profile_adpeos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('district_id')->unsigned();
-            $table->bigInteger('profile_dpeo_id')->unsigned()->nullable();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('district_id')->unsigned();
+            $table->integer('profile_dpeo_id')->unsigned()->nullable();
             $table->string('about')->nullable();
-            $table->timestamps();
+            $table->timestamps();            
+            $table->softDeletes();
 
             $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

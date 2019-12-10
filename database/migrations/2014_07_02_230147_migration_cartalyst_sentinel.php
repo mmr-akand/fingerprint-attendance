@@ -31,9 +31,9 @@ class MigrationCartalystSentinel extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
-            $table->string('phone')->nullable();
+            $table->string('phone');
             $table->string('password')->nullable();
             $table->string('email')->nullable();
             $table->text('permissions')->nullable();
@@ -42,12 +42,12 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamps();
 
             $table->engine = 'InnoDB';
-            $table->unique('email');
+            $table->unique('phone');
         });
 
         Schema::create('activations', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('code');
             $table->boolean('completed')->default(0);
             $table->timestamp('completed_at')->nullable();
@@ -58,8 +58,8 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('persistences', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('code');
             $table->timestamps();
 
@@ -69,8 +69,8 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('reminders', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('code');
             $table->boolean('completed')->default(0);
             $table->timestamp('completed_at')->nullable();
@@ -92,7 +92,7 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('role_users', function (Blueprint $table) {
-            $table->bigInteger('user_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->integer('role_id')->unsigned();
             $table->nullableTimestamps();
             $table->softDeletes();
@@ -104,8 +104,8 @@ class MigrationCartalystSentinel extends Migration
         });
 
         Schema::create('throttle', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('type');
             $table->string('ip')->nullable();
             $table->timestamps();

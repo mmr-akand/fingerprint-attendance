@@ -25,7 +25,10 @@ class DatabaseSeeder extends Seeder
         DB::table('profile_adpeos')->truncate();
         DB::table('profile_teos')->truncate();
         DB::table('profile_ateos')->truncate();
+
+        DB::table('schools')->truncate();
         DB::table('profile_teachers')->truncate();
+        DB::table('attendances')->truncate();
 
         DB::table('users')->truncate();
         DB::table('role_users')->truncate();
@@ -38,6 +41,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SentinelAdpeoSeeder::class);
         $this->call(SentinelTeoSeeder::class);
         $this->call(SentinelAteoSeeder::class);
+        $this->call(SampleData::class);
 
         $this->command->info('All seeder seeded!');
 

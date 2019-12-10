@@ -6,45 +6,51 @@
                     <tr>
                         <th>ID</th>
                         <th>Teacher Name</th>
+                        <th>Date</th>
                         <th>Entry Time</th>
                         <th>Departure Time</th>
-                        <th>Date</th>
                         <th>School Name</th>
                     </tr>
                 </thead>
-                <tbody>                    
+                <tbody>    
+                    @foreach($attendances as $attendance)                
                         <tr>
                             <td>
                                 <div class="text-nowrap">
-                                    ID
+                                    {{$attendance->id ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    Name
+                                    {{$attendance->teacher->user->name ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    10:00
+                                    {{date('d/m/Y', strtotime($attendance->date))}}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-nowrap">                                    
+                                    {{date('g:i A', strtotime($attendance->entry))}}
                                 </div>
                             </td>  
                             <td>
-                                <div class="text-nowrap">
-                                    04:34
+                                <div class="text-nowrap">  
+                                    @if($attendance->departure)  
+                                        {{date('g:i A', strtotime($attendance->departure))}}
+                                    @else
+                                        &nbsp;
+                                    @endif
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    Date
-                                </div>
-                            </td>
-                            <td>
-                                <div class="text-nowrap">
-                                    School
+                                    {{$attendance->school->name ?? ''}}
                                 </div>
                             </td>             
                         </tr>
+                    @endforeach
                 </tbody>
 
             </table>

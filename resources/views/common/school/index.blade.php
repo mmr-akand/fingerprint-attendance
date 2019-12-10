@@ -6,28 +6,35 @@
                     <tr>
                         <th>ID</th>
                         <th>School Name</th>
-                        <th>Union Name</th>
+                        <th>Number of Teachers</th>
+                        <!-- <th>Union Name</th> -->
                     </tr>
                 </thead>
-                <tbody>                    
+                <tbody> 
+                    @foreach($schools as $school)                   
                         <tr>
                             <td>
                                 <div class="text-nowrap">
-                                    ID
+                                    {{$school->id ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    Name
+                                    {{$school->name ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    Union Name
+                                    {{count($school->teachers)}}
                                 </div>
                             </td>
-             
+                            <!-- <td>
+                                <div class="text-nowrap">
+                                    {{$school->union_name ?? ''}}
+                                </div>
+                            </td>  -->            
                         </tr>
+                    @endforeach
                 </tbody>
 
             </table>

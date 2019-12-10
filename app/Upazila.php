@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Upazila extends Model
 {
+    const BODA = 1;
+
     protected $table = 'upazilas';
 
     /**
@@ -16,4 +18,9 @@ class Upazila extends Model
     protected $fillable = [
         'district_id', 'name'
     ];
+
+    public function schools()
+    {
+        return $this->hasMany('App\School');
+    }
 }

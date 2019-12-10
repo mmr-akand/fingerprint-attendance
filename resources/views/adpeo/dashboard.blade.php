@@ -21,9 +21,9 @@
     <div class="col-sm-12">
         <div class="card-group">
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/customer/panel/bookings?filter=ongoing">
+                <a href="/adpeo/panel/school/index">
                     <div class="card-block">
-                        <h2 class="stat-card-number">343</h2>
+                        <h2 class="stat-card-number">{{$stats['total_schools'] ?? ''}}</h2>
                         <div class="stat-card-icon">
                             <i class="icofont icofont-university"></i>
                         </div>
@@ -32,9 +32,9 @@
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/customer/panel/bookings?filter=upcoming">
+                <a href="/adpeo/panel/teacher/index">
                     <div class="card-block">
-                        <h2 class="stat-card-number">45</h2>
+                        <h2 class="stat-card-number">{{$stats['total_teachers'] ?? ''}}</h2>
                         <div class="stat-card-icon">
                             <i class="icofont icofont-teacher"></i>
                         </div>
@@ -43,9 +43,9 @@
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/customer/panel/bookings?filter=open">
+                <a href="/adpeo/panel/attendance/index">
                     <div class="card-block">
-                        <h2 class="stat-card-number">55</h2>
+                        <h2 class="stat-card-number">{{$stats['present_today'] ?? ''}}</h2>
                         <div class="stat-card-icon">
                             <i class="icofont icofont-hand"></i>
                         </div>
@@ -56,7 +56,7 @@
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
                 <a href="/customer/panel/bookings?filter=completed">
                     <div class="card-block">
-                        <h2 class="stat-card-number">333</h2>
+                        <h2 class="stat-card-number">{{$stats['absent_today'] ?? ''}}</h2>
                         <div class="stat-card-icon">
                             <i class="icofont icofont-not-allowed"></i>
                         </div>
@@ -65,15 +65,13 @@
                 </a>
             </div>            
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/customer/panel/transactions">
-                    <div class="card-block">
-                        <h2 class="stat-card-number">555 টাকা </h2>
-                        <div class="stat-card-icon">
-                            <i class="icofont icofont-people"></i>
-                        </div>
-                        <span class="stat-card-name">Present Percentage</span>
+                <div class="card-block">
+                    <h2 class="stat-card-number">{{$stats['present_percentage'] ?? ''}} %</h2>
+                    <div class="stat-card-icon">
+                        <i class="icofont icofont-people"></i>
                     </div>
-                </a>
+                    <span class="stat-card-name">Present Percentage</span>
+                </div>
             </div>
         </div>     
     </div>

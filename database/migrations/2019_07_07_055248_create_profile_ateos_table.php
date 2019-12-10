@@ -14,14 +14,15 @@ class CreateProfileAteosTable extends Migration
     public function up()
     {
         Schema::create('profile_ateos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('upazila_id')->unsigned();
-            $table->bigInteger('profile_dpeo_id')->unsigned()->nullable();
-            $table->bigInteger('profile_adpeo_id')->unsigned()->nullable();
-            $table->bigInteger('profile_teo_id')->unsigned()->nullable();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('upazila_id')->unsigned();
+            $table->integer('profile_dpeo_id')->unsigned()->nullable();
+            $table->integer('profile_adpeo_id')->unsigned()->nullable();
+            $table->integer('profile_teo_id')->unsigned()->nullable();
             $table->string('about')->nullable();
-            $table->timestamps();
+            $table->timestamps();            
+            $table->softDeletes();
 
             $table->foreign('upazila_id')->references('id')->on('upazilas')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

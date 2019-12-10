@@ -22,4 +22,9 @@ class AdpeoProfile extends Model
     {
         return $this->belongsTo('App\User', 'user_id');
     }
+    
+    public function teos()
+    {
+        return $this->hasmany('App\TeoProfile', 'profile_adpeo_id');
+    }
 }

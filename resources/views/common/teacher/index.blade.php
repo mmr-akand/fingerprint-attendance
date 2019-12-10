@@ -7,39 +7,44 @@
                         <th>ID</th>
                         <th>Teacher Name</th>
                         <th>Phone Number</th>
+                        <th>Designation</th>
                         <th>School Name</th>
-                        <th>Head Teacher</th>
                     </tr>
                 </thead>
-                <tbody>                    
+                <tbody> 
+                    @foreach($teachers as $teacher)                   
                         <tr>
                             <td>
                                 <div class="text-nowrap">
-                                    ID
+                                    {{$teacher->id ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    Name
+                                    {{$teacher->user->name ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    PHone
+                                    {{$teacher->user->phone ?? ''}}
                                 </div>
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    School
+                                    @if($teacher->is_head_teacher == 'yes')
+                                        Head Teacher
+                                    @else
+                                        Assistant Teacher
+                                    @endif
                                 </div>
-                            </td>
+                            </td>  
                             <td>
                                 <div class="text-nowrap">
-                                    No
+                                    {{$teacher->school->name ?? ''}}
                                 </div>
-                            </td>
-             
+                            </td>           
                         </tr>
+                    @endforeach
                 </tbody>
 
             </table>

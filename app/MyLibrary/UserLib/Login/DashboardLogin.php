@@ -6,9 +6,6 @@ use Sentinel;
 
 class DashboardLogin extends UserLogin
 {
-	/**
-	 * is the user an customer, admin or owner?
-	 */
 	protected function isAuthorizedRole()
 	{
 		$user = $this->user;
@@ -32,24 +29,24 @@ class DashboardLogin extends UserLogin
     {
         $user = $this->user;
 
-        $adminRole = Sentinel::findRoleBySlug('super-admin');
-        $ownerRole = Sentinel::findRoleBySlug('dpeo');
-        $customerRole = Sentinel::findRoleBySlug('adpeo');
-        $customerRole = Sentinel::findRoleBySlug('teo');
-        $customerRole = Sentinel::findRoleBySlug('ateo');
-        $customerRole = Sentinel::findRoleBySlug('teacher');
+        $admin = Sentinel::findRoleBySlug('super-admin');
+        $dpeo = Sentinel::findRoleBySlug('dpeo');
+        $adpeo = Sentinel::findRoleBySlug('adpeo');
+        $teo = Sentinel::findRoleBySlug('teo');
+        $ateo = Sentinel::findRoleBySlug('ateo');
+        $teacher = Sentinel::findRoleBySlug('teacher');
 
-        if ($user->inRole($adminRole)) {
+        if ($user->inRole($admin)) {
             return 'admin';
-        } elseif ($user->inRole($ownerRole)) {
+        } elseif ($user->inRole($dpeo)) {
             return 'dpeo';
-        } elseif ($user->inRole($customerRole)) {
+        } elseif ($user->inRole($adpeo)) {
             return 'adpeo';
-        } elseif ($user->inRole($customerRole)) {
+        } elseif ($user->inRole($teo)) {
             return 'teo';
-        } elseif ($user->inRole($customerRole)) {
+        } elseif ($user->inRole($ateo)) {
             return 'ateo';
-        } elseif ($user->inRole($customerRole)) {
+        } elseif ($user->inRole($teacher)) {
             return 'teacher';
         }
         

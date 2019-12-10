@@ -14,10 +14,11 @@ class CreateProfileAdminsTable extends Migration
     public function up()
     {
         Schema::create('profile_admins', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('about')->nullable();
-            $table->timestamps();
+            $table->timestamps();            
+            $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
