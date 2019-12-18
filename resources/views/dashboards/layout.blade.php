@@ -49,9 +49,6 @@
             <button type="button" class="btn nav-toggle-btn navbar-toggle-left aside-toggler d-block d-md-none">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
-                <span>Attendance Management</span>
-            </a>
             <div class="navbar-header-actions">   
                 <button type="button" class="btn nav-toggle-btn nav-more-toggle-btn d-block d-md-none" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false" aria-controls="navbar-collapse-mobile">
                     <i class="ion-more"></i>
@@ -101,8 +98,8 @@
     <aside class="aside-navbar aside-scrollable">
         <div class="aside-navbar-header hidden-sm-down">
             <a class="navbar-brand" href="/">
-                <span width="120" class="d-inline-block align-middle logo-large" alt="...">Attendance Management</span>
-                <span width="60" class="d-inline-block align-middle logo-small" alt="...">Attendance Management</span>
+                <span width="120" class="d-inline-block align-middle logo-large" alt="...">Education Management<br> & Information System</span>
+                <span width="60" class="d-inline-block align-middle logo-small" alt="...">EMIS</span>
             </a>
         </div>
         <div class="aside-navbar-body">
@@ -140,7 +137,7 @@
         <footer class="footer container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <span class="copyright">Copyright is reserved by Boda upazila, Panchagarh.</span>
+                    <!-- <span class="copyright">Copyright is reserved by Boda upazila, Panchagarh.</span> -->
                 </div>
             </div>
         </footer>

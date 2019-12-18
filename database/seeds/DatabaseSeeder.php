@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
 
+        DB::table('unions')->truncate();
         DB::table('upazilas')->truncate();
         DB::table('districts')->truncate();
         DB::table('divisions')->truncate();
@@ -34,7 +35,7 @@ class DatabaseSeeder extends Seeder
         DB::table('role_users')->truncate();
         DB::table('roles')->truncate();
 
-        $this->call(DivisionDistrictThanaSeeder::class);
+        $this->call(DivisionDistrictThanaUnionSeeder::class);
         $this->call(SentinelRoleSeeder::class);
         $this->call(SentinelAdminSeeder::class);
         $this->call(SentinelDpeoSeeder::class);

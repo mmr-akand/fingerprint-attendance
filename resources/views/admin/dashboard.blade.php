@@ -43,7 +43,7 @@
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/admin/panel/attendance/index">
+                <a href="/admin/panel/attendance/present">
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['present_today'] ?? ''}}</h2>
                         <div class="stat-card-icon">
@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/customer/panel/bookings?filter=completed">
+                <a href="/admin/panel/attendance/absent">
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['absent_today'] ?? ''}}</h2>
                         <div class="stat-card-icon">
