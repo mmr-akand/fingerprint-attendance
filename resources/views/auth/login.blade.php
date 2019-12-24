@@ -16,8 +16,7 @@
                 <div>
                     <label for="phone" class="label-log">Phone</label>
                     <div class="input-phone-group has-form-control-lg">
-                        <input class="form-control form-control-lg form-control-danger input-phone" value="{{old('phone')}}" id="phone" name="phone" type="text">
-                        <span class="country-code">+88</span>
+                        <input class="form-control form-control-lg form-control-danger" value="{{old('phone')}}" id="phone" name="phone" type="text">
                     </div>                            
                 </div>
                 <div class="form-control-feedback">@if($errors->first('phone')!=null) {{ $errors->first('phone')}} @endif</div>
