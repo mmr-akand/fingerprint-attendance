@@ -9,7 +9,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Attendance Management</title>
+    <title>Education Management & Information System</title>
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> 
     <meta name="msapplication-TileColor" content="#ffffff"> 
