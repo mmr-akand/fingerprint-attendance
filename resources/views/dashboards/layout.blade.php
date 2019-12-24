@@ -98,7 +98,12 @@
     <aside class="aside-navbar aside-scrollable">
         <div class="aside-navbar-header hidden-sm-down">
             <a class="navbar-brand" href="/">
-                <span width="120" class="d-inline-block align-middle logo-large" alt="...">Education Management<br> & Information System</span>
+                <div class=" text-center">
+                    <img width="80" height="80" class="d-inline-block align-middle logo-large" src="/dashboard/images/DPELogo.jpg">
+                </div>
+                <div>
+                    <span width="120" class="d-inline-block align-middle logo-large" alt="...">Education Management<br> & Information System</span>
+                </div>
                 <span width="60" class="d-inline-block align-middle logo-small" alt="...">EMIS</span>
             </a>
         </div>

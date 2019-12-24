@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#ffffff">
 
 
-    <title>হেভিগাড়ী</title>
+    <title>Education Management & Information System</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">

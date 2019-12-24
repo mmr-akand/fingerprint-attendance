@@ -5,7 +5,13 @@
     {!! csrf_field() !!}
     <div class="log-card">
         <div class="log-block">
-            <h4 class="log-title text-center">Log In</h4>
+            <div class="text-center">
+                <img src="/dashboard/images/bdlogo.png">
+            </div>
+            <br>
+            <div class="text-center">                
+                <h4 class="log-title ">LOG IN TO EMIS</h4>
+            </div>
             <div class="form-group @if($errors->first('phone')!=null) has-danger @endif">
                 <div>
                     <label for="phone" class="label-log">Phone</label>
