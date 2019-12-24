@@ -16,6 +16,7 @@ class CreateProfileSchoolsTable extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
+            $table->bigInteger('deviceid')->nullable();
             $table->integer('upazila_id')->unsigned();
             $table->integer('profile_teo_id')->unsigned()->nullable();
             $table->integer('profile_ateo_id')->unsigned()->nullable();

@@ -15,6 +15,7 @@ class CreateProfileTeachersTable extends Migration
     {
         Schema::create('profile_teachers', function (Blueprint $table) {
             $table->increments('id');
+            $table->bigInteger('enrollid')->nullable();
             $table->integer('user_id')->unsigned();
             $table->integer('school_id')->unsigned();
             $table->enum('is_head_teacher', ['no', 'yes'])->default('no');

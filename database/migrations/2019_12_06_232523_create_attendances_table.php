@@ -20,6 +20,7 @@ class CreateAttendancesTable extends Migration
             $table->date('date')->nullable();
             $table->integer('profile_teacher_id')->unsigned();
             $table->integer('school_id')->unsigned();
+            $table->text('note')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
