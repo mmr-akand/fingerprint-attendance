@@ -6,8 +6,9 @@
                     <tr>
                         <th>ID</th>
                         <th>School Name</th>
+                        <th>School Code</th>
                         <th>Number of Teachers</th>
-                        <!-- <th>Union Name</th> -->
+                        <th>Pourosova/Union Name</th>
                     </tr>
                 </thead>
                 <tbody> 
@@ -20,7 +21,12 @@
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    {{$school->name ?? ''}}
+                                    <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/index">{{$school->name ?? ''}}</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-nowrap">
+                                    {{$school->deviceid ?? ''}}
                                 </div>
                             </td>
                             <td>
@@ -28,11 +34,11 @@
                                     {{count($school->teachers)}}
                                 </div>
                             </td>
-                            <!-- <td>
+                            <td>
                                 <div class="text-nowrap">
-                                    {{$school->union_name ?? ''}}
+                                    {{$school->union->name ?? ''}}
                                 </div>
-                            </td>  -->            
+                            </td>          
                         </tr>
                     @endforeach
                 </tbody>

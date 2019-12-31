@@ -1,14 +1,14 @@
 @extends('dashboards.layout')
 
 @section('menu')
-    @include('admin.sidemenu')
+    @include('teacher.sidemenu')
 @stop
 
 @section('content-header')
 <div class="page-header-content">
     <div class="page-header-meta">
         <div class="page-header-cell">
-            <h1 class="title">{{$title ?? ''}} @if(isset($union)) ({{$union->name}} Union) @endif </h1>
+            <h1 class="title">{{$title ?? ''}} </h1>
             <div class="title-sub">
             </div>
         </div>
@@ -17,5 +17,5 @@
 @stop
 
 @section('content-body')
-    @include('common/school/index')
+    @include('common/teacher/show')
 @stop

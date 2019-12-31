@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dpeo;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\TeacherProfile;
 use App\Attendance;
 
 class AttendanceController extends Controller
@@ -22,13 +23,15 @@ class AttendanceController extends Controller
 
     public function absent()
     {
-    	$attendances = Attendance::where('date', date("Y-m-d"))->get();
+    	$attendance_ids = Attendance::where('date', date("Y-m-d"))->get()->pluck('profile_teacher_id');
 
-    	$data = [
-    		'title' => 'Attendance - Absent',
-    		'attendances' => $attendances
-    	];
+        $absent_teachers = TeacherProfile::whereNotIn('id', $attendance_ids)->get();
 
-    	return view('dpeo.attendance.index', $data);
+        $data = [
+            'title' => 'Attendance - Absent',
+            'absent_teachers' => $absent_teachers
+        ];
+
+    	return view('dpeo.attendance.absent', $data);
     }
 }

@@ -21,4 +21,9 @@ class School extends Model
     {
         return $this->hasMany('App\TeacherProfile');
     }
+
+    public function union()
+    {
+        return $this->belongsTo('App\Union', 'union_id');
+    }
 }

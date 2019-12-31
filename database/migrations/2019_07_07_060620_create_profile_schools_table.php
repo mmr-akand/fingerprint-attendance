@@ -16,13 +16,16 @@ class CreateProfileSchoolsTable extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
+            $table->string('address')->nullable();
             $table->bigInteger('deviceid')->nullable();
+            $table->integer('union_id')->unsigned();
             $table->integer('upazila_id')->unsigned();
             $table->integer('profile_teo_id')->unsigned()->nullable();
             $table->integer('profile_ateo_id')->unsigned()->nullable();
             $table->timestamps();            
             $table->softDeletes();
 
+            $table->foreign('union_id')->references('id')->on('unions')->onDelete('cascade');
             $table->foreign('upazila_id')->references('id')->on('upazilas')->onDelete('cascade');
             $table->foreign('profile_teo_id')->references('id')->on('profile_teos')->onDelete('set null');
             $table->foreign('profile_ateo_id')->references('id')->on('profile_ateos')->onDelete('set null');

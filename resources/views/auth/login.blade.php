@@ -6,7 +6,7 @@
     <div class="log-card">
         <div class="log-block">
             <div class="text-center">
-                <img src="/dashboard/images/bdlogo.png">
+                <img src="/dashboard/images/DPELogo.jpg" width="70" height="70">
             </div>
             <br>
             <div class="text-center">                

@@ -36,7 +36,7 @@ class DivisionDistrictThanaUnionSeeder extends Seeder
 
         DB::table('unions')->insert(['id' => 1, 'name' => 'Panchagarh Sadar', 'upazila_id' => 1]);
         DB::table('unions')->insert(['id' => 2, 'name' => 'Amarkhana', 'upazila_id' => 1]);
-        DB::table('unions')->insert(['id' => 3, 'name' => 'Chaklarhat', 'upazila_id' => 1]);
+        DB::table('unions')->insert(['id' => 3, 'name' => 'Chaklahat', 'upazila_id' => 1]);
         DB::table('unions')->insert(['id' => 4, 'name' => 'Dhakkamara', 'upazila_id' => 1]);
         DB::table('unions')->insert(['id' => 5, 'name' => 'Garinabari', 'upazila_id' => 1]);
         DB::table('unions')->insert(['id' => 6, 'name' => 'Hafizabad', 'upazila_id' => 1]);

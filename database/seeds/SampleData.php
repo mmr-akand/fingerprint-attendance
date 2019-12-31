@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class SampleData extends Seeder
 {
@@ -15,6 +14,7 @@ class SampleData extends Seeder
     	DB::table('schools')->insert([
            'id' => 1,
            'name' => 'Amtoly Primary School',
+           'union_id' => 1,
            'upazila_id' => 1,
            'profile_teo_id' => 1,
            'created_at' => now(),
@@ -23,6 +23,7 @@ class SampleData extends Seeder
     	DB::table('schools')->insert([
            'id' => 2,
            'name' => 'Shimulia Primary School',
+           'union_id' => 1,
            'upazila_id' => 1,
            'profile_teo_id' => 1,
            'created_at' => now(),
@@ -31,6 +32,7 @@ class SampleData extends Seeder
     	DB::table('schools')->insert([
            'id' => 3,
            'name' => 'Patuavanga Primary School',
+           'union_id' => 1,
            'upazila_id' => 1,
            'profile_teo_id' => 1,
            'created_at' => now(),
@@ -39,6 +41,7 @@ class SampleData extends Seeder
     	DB::table('schools')->insert([
            'id' => 4,
            'name' => 'Pobonkhali Primary School',
+           'union_id' => 1,
            'upazila_id' => 1,
            'profile_teo_id' => 1,
            'created_at' => now(),
@@ -213,9 +216,9 @@ class SampleData extends Seeder
         //attendances
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-07 10:05:33',
-           'departure' => '2019-12-07 16:20:33',
-           'date' => '2019-12-07',
+           'entry' => '2019-12-24 10:05:33',
+           'departure' => '2019-12-24 16:20:33',
+           'date' => '2019-12-24',
            'profile_teacher_id' => 1,
            'school_id' => 1,
            'created_at' => now(),
@@ -223,9 +226,9 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-07 11:10:33',
-           'departure' => '2019-12-07 16:50:33',
-           'date' => '2019-12-07',
+           'entry' => '2019-12-24 11:10:33',
+           'departure' => '2019-12-24 16:50:33',
+           'date' => '2019-12-24',
            'profile_teacher_id' => 2,
            'school_id' => 1,
            'created_at' => now(),
@@ -233,9 +236,9 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-07 10:40:33',
-           'departure' => '2019-12-07 16:30:33',
-           'date' => '2019-12-07',
+           'entry' => '2019-12-24 10:40:33',
+           'departure' => '2019-12-24 16:30:33',
+           'date' => '2019-12-24',
            'profile_teacher_id' => 4,
            'school_id' => 2,
            'created_at' => now(),
@@ -243,9 +246,9 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-08 10:00:33',
-           'departure' => '2019-12-08 16:00:33',
-           'date' => '2019-12-08',
+           'entry' => '2019-12-25 10:00:33',
+           'departure' => '2019-12-25 16:00:33',
+           'date' => '2019-12-25',
            'profile_teacher_id' => 1,
            'school_id' => 1,
            'created_at' => now(),
@@ -253,9 +256,9 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-08 11:00:33',
-           'departure' => '2019-12-08 16:30:33',
-           'date' => '2019-12-08',
+           'entry' => '2019-12-25 11:00:33',
+           'departure' => '2019-12-25 16:30:33',
+           'date' => '2019-12-25',
            'profile_teacher_id' => 2,
            'school_id' => 1,
            'created_at' => now(),
@@ -263,9 +266,9 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-08 10:30:33',
-           'departure' => '2019-12-08 17:30:33',
-           'date' => '2019-12-08',
+           'entry' => '2019-12-25 10:30:33',
+           'departure' => '2019-12-25 17:30:33',
+           'date' => '2019-12-25',
            'profile_teacher_id' => 4,
            'school_id' => 2,
            'created_at' => now(),

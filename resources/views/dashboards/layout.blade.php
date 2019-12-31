@@ -142,7 +142,7 @@
         <footer class="footer container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <!-- <span class="copyright">Copyright is reserved by Boda upazila, Panchagarh.</span> -->
+                    <span class="copyright">Copyright is reserved by AIT</span>
                 </div>
             </div>
         </footer>

@@ -27,7 +27,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'sentinel-auth:super-admin'],
     Route::group(['prefix' => 'panel'], function() {
         Route::get('dashboard', 'Admin\DashboardController@index');
         Route::get('school/index', 'Admin\SchoolController@index');
+        Route::get('union/{union}/school', 'Admin\SchoolController@schoolByUnion');
         Route::get('teacher/index', 'Admin\TeacherController@index');
+        Route::get('school/{school}/teacher/index', 'Admin\TeacherController@teacherBySchool');
+        Route::get('school/{school}/teacher/{teacher}', 'Admin\TeacherController@show');
         Route::get('attendance/present', 'Admin\AttendanceController@index');
         Route::get('attendance/absent', 'Admin\AttendanceController@absent');
     });
@@ -37,7 +40,10 @@ Route::group(['prefix' => 'dpeo', 'middleware' => 'sentinel-auth:dpeo'], functio
     Route::group(['prefix' => 'panel'], function() {
         Route::get('dashboard', 'Dpeo\DashboardController@index');
         Route::get('school/index', 'Dpeo\SchoolController@index');
+        Route::get('union/{union}/school', 'Dpeo\SchoolController@schoolByUnion');
         Route::get('teacher/index', 'Dpeo\TeacherController@index');
+        Route::get('school/{school}/teacher/index', 'Dpeo\TeacherController@teacherBySchool');
+        Route::get('school/{school}/teacher/{teacher}', 'Dpeo\TeacherController@show');
         Route::get('attendance/present', 'Dpeo\AttendanceController@index');
         Route::get('attendance/absent', 'Dpeo\AttendanceController@absent');
     });
@@ -47,7 +53,10 @@ Route::group(['prefix' => 'adpeo', 'middleware' => 'sentinel-auth:adpeo'], funct
     Route::group(['prefix' => 'panel'], function() {
         Route::get('dashboard', 'Adpeo\DashboardController@index');
         Route::get('school/index', 'Adpeo\SchoolController@index');
+        Route::get('union/{union}/school', 'Adpeo\SchoolController@schoolByUnion');
         Route::get('teacher/index', 'Adpeo\TeacherController@index');
+        Route::get('school/{school}/teacher/index', 'Adpeo\TeacherController@teacherBySchool');
+        Route::get('school/{school}/teacher/{teacher}', 'Adpeo\TeacherController@show');
         Route::get('attendance/present', 'Adpeo\AttendanceController@index');
         Route::get('attendance/absent', 'Adpeo\AttendanceController@absent');
     });
@@ -57,7 +66,10 @@ Route::group(['prefix' => 'teo', 'middleware' => 'sentinel-auth:teo'], function(
     Route::group(['prefix' => 'panel'], function() {
         Route::get('dashboard', 'Teo\DashboardController@index');
         Route::get('school/index', 'Teo\SchoolController@index');
+        Route::get('union/{union}/school', 'Teo\SchoolController@schoolByUnion');
         Route::get('teacher/index', 'Teo\TeacherController@index');
+        Route::get('school/{school}/teacher/index', 'Teo\TeacherController@teacherBySchool');
+        Route::get('school/{school}/teacher/{teacher}', 'Teo\TeacherController@show');
         Route::get('attendance/present', 'Teo\AttendanceController@index');
         Route::get('attendance/absent', 'Teo\AttendanceController@absent');
     });
@@ -67,7 +79,10 @@ Route::group(['prefix' => 'ateo', 'middleware' => 'sentinel-auth:ateo'], functio
     Route::group(['prefix' => 'panel'], function() {
         Route::get('dashboard', 'Ateo\DashboardController@index');
         Route::get('school/index', 'Ateo\SchoolController@index');
+        Route::get('union/{union}/school', 'Ateo\SchoolController@schoolByUnion');
         Route::get('teacher/index', 'Ateo\TeacherController@index');
+        Route::get('school/{school}/teacher/index', 'Ateo\TeacherController@teacherBySchool');
+        Route::get('school/{school}/teacher/{teacher}', 'Ateo\TeacherController@show');
         Route::get('attendance/present', 'Ateo\AttendanceController@index');
         Route::get('attendance/absent', 'Ateo\AttendanceController@absent');
     });
@@ -77,7 +92,10 @@ Route::group(['prefix' => 'teacher', 'middleware' => 'sentinel-auth:teacher'], f
     Route::group(['prefix' => 'panel'], function() {
         Route::get('dashboard', 'Teacher\DashboardController@index');
         Route::get('school/index', 'Teacher\SchoolController@index');
+        Route::get('union/{union}/school', 'Teacher\SchoolController@schoolByUnion');
         Route::get('teacher/index', 'Teacher\TeacherController@index');
+        Route::get('school/{school}/teacher/index', 'Teacher\TeacherController@teacherBySchool');
+        Route::get('school/{school}/teacher/{teacher}', 'Teacher\TeacherController@show');
         Route::get('attendance/present', 'Teacher\AttendanceController@index');
         Route::get('attendance/absent', 'Teacher\AttendanceController@absent');
     });

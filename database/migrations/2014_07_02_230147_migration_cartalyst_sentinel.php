@@ -42,7 +42,7 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamps();
 
             $table->engine = 'InnoDB';
-            $table->unique('phone');
+            //$table->unique('phone');
         });
 
         Schema::create('activations', function (Blueprint $table) {
