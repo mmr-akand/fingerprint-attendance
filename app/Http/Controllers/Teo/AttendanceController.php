@@ -22,6 +22,7 @@ class AttendanceController extends Controller
 
         $data = [
             'title' => 'Attendance - Present',
+            'panel' => 'teo',
             'attendances' => $attendances
         ];
 
@@ -36,12 +37,13 @@ class AttendanceController extends Controller
         
         $attendances = Attendance::where('date', date("Y-m-d"))->whereIn('school_id', $school_ids)->get();*/
 
-        $attendance_ids = Attendance::where('date', date("Y-m-d"))->get()->pluck('profile_teacher_id');
+        $present_teacher_ids = Attendance::where('date', date("Y-m-d"))->get()->pluck('profile_teacher_id');
 
-        $absent_teachers = TeacherProfile::whereNotIn('id', $attendance_ids)->get();
+        $absent_teachers = TeacherProfile::whereNotIn('id', $present_teacher_ids)->get();
 
         $data = [
             'title' => 'Attendance - Absent',
+            'panel' => 'teo',
             'absent_teachers' => $absent_teachers
         ];
 

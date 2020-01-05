@@ -15,6 +15,7 @@ class AttendanceController extends Controller
 
     	$data = [
     		'title' => 'Attendance - Present',
+            'panel' => 'dpeo',
     		'attendances' => $attendances
     	];
 
@@ -29,6 +30,7 @@ class AttendanceController extends Controller
 
         $data = [
             'title' => 'Attendance - Absent',
+            'panel' => 'dpeo',
             'absent_teachers' => $absent_teachers
         ];
 

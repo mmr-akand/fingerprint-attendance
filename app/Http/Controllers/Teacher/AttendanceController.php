@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Teacher;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\TeacherProfile;
 use App\Attendance;
 use Sentinel;
 
@@ -13,12 +14,13 @@ class AttendanceController extends Controller
     {
         $user = Sentinel::getUser();
 
-        $teacherIds = $user->teacherProfile->school->teachers->pluck('id');
+        $school = $user->teacherProfile->school;
         
-        $attendances = Attendance::where('date', date("Y-m-d"))->whereIn('profile_teacher_id', $teacherIds)->get();
+        $attendances = Attendance::where('date', date("Y-m-d"))->where('school_id', $school->id)->get();
 
         $data = [
             'title' => 'Attendance - Present',
+            'panel' => 'teacher',
             'attendances' => $attendances
         ];
 
@@ -29,15 +31,18 @@ class AttendanceController extends Controller
     {
         $user = Sentinel::getUser();
 
-        $teacherIds = $user->teacherProfile->school->teachers->pluck('id');
+        $school = $user->teacherProfile->school;
         
-        $attendances = Attendance::where('date', date("Y-m-d"))->whereIn('profile_teacher_id', $teacherIds)->get();
+        $present_teacher_ids = Attendance::where('date', date("Y-m-d"))->where('school_id', $school->id)->pluck('profile_teacher_id');
+
+        $absent_teachers = TeacherProfile::where('school_id', $school->id)->whereNotIn('id', $present_teacher_ids)->get();
 
         $data = [
             'title' => 'Attendance - Absent',
-            'attendances' => $attendances
+            'panel' => 'teacher',
+            'absent_teachers' => $absent_teachers
         ];
 
-        return view('teacher.attendance.index', $data);
+        return view('teacher.attendance.absent', $data);
     }
 }

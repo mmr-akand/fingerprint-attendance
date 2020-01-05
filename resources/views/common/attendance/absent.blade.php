@@ -19,14 +19,19 @@
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    {{$teacher->user->name ?? ''}}
+                                    <a href="/{{$panel}}/panel/school/{{$teacher->school->id}}/teacher/{{$teacher->id}}">{{$teacher->user->name}}</a>
                                 </div>
-                            </td>
+                            </td> 
                             <td>
                                 <div class="text-nowrap">
-                                    {{$teacher->school->name ?? ''}}
+
+                                    @if($panel=='teacher')
+                                        {{$teacher->school->name ?? ''}}
+                                    @else
+                                        <a href="/{{$panel}}/panel/school/{{$teacher->school->id}}/teacher/index">{{$teacher->school->name ?? ''}}</a>
+                                    @endif
                                 </div>
-                            </td>             
+                            </td>           
                         </tr>
                     @endforeach
                 </tbody>

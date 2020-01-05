@@ -22,7 +22,7 @@
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    {{$attendance->teacher->user->name ?? ''}}
+                                    <a href="/{{$panel}}/panel/school/{{$attendance->school->id}}/teacher/{{$attendance->teacher->id}}">{{$attendance->teacher->user->name}}</a>
                                 </div>
                             </td>
                             <td>
@@ -46,9 +46,13 @@
                             </td>
                             <td>
                                 <div class="text-nowrap">
-                                    {{$attendance->school->name ?? ''}}
+                                    @if($panel=='teacher')
+                                        {{$attendance->school->name ?? ''}}
+                                    @else
+                                        <a href="/{{$panel}}/panel/school/{{$attendance->school->id}}/teacher/index">{{$attendance->school->name ?? ''}}</a>
+                                    @endif
                                 </div>
-                            </td>             
+                            </td>          
                         </tr>
                     @endforeach
                 </tbody>

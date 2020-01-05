@@ -14,7 +14,8 @@ class AttendanceController extends Controller
     	$attendances = Attendance::where('date', date("Y-m-d"))->get();
 
     	$data = [
-    		'title' => 'Attendance - Present',
+            'title' => 'Attendance - Present',
+    		'panel' => 'admin',
     		'attendances' => $attendances
     	];
 
@@ -29,6 +30,7 @@ class AttendanceController extends Controller
 
     	$data = [
     		'title' => 'Attendance - Absent',
+            'panel' => 'admin',
     		'absent_teachers' => $absent_teachers
     	];
 
