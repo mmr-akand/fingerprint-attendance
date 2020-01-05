@@ -15,8 +15,12 @@ class AdminDashboard extends DashboardManager
     	$teachers = TeacherProfile::get();
 
     	$attendances = Attendance::where('date', date("Y-m-d"))->get();
+    	
+    	$late_arrivals = Attendance::where('date', date("Y-m-d"))->whereTime('entry', '>', '10:00:00')->get();
 
-		$stats = $this->reformStats($schools, $teachers, $attendances);
+    	$early_departures = Attendance::where('date', date("Y-m-d"))->whereTime('departure', '<', '17:15:00')->get();    	
+
+		$stats = $this->reformStats($schools, $teachers, $attendances, $late_arrivals, $early_departures);
 
 		return $stats;
 	}

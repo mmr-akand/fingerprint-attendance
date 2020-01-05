@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SentinelAdpeoSeeder::class);
         $this->call(SentinelTeoSeeder::class);
         $this->call(SentinelAteoSeeder::class);
-        //$this->call(SampleData::class);
+        $this->call(SampleData::class);
        
         /*
         DB::table('users')->truncate();
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
         DB::table('profile_teachers')->truncate();
         DB::table('schools')->truncate();*/
 
-        $this->call(SadarUnionSeeder::class);
+        /*$this->call(SadarUnionSeeder::class);
         $this->call(AmarkhanaUnionSeeder::class);
         $this->call(ChaklahatUnionSeeder::class);
         $this->call(DhakkamaraUnionSeeder::class);
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
         $this->call(HaribhasaUnionSeeder::class);
         $this->call(KamatKajalDighiUnionSeeder::class);
         $this->call(MaguraUnionSeeder::class);
-        $this->call(SatmaraUnionSeeder::class);
+        $this->call(SatmaraUnionSeeder::class);*/
 
         $this->command->info('All seeder seeded!');
 

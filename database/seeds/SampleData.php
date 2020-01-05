@@ -216,8 +216,8 @@ class SampleData extends Seeder
         //attendances
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-24 10:05:33',
-           'departure' => '2019-12-24 16:20:33',
+           'entry' => '2020-01-05 10:05:33',
+           'departure' => '2020-01-05 16:20:33',
            'date' => '2019-12-24',
            'profile_teacher_id' => 1,
            'school_id' => 1,
@@ -226,8 +226,8 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-24 11:10:33',
-           'departure' => '2019-12-24 16:50:33',
+           'entry' => '2020-01-05 11:10:33',
+           'departure' => '2020-01-05 16:50:33',
            'date' => '2019-12-24',
            'profile_teacher_id' => 2,
            'school_id' => 1,
@@ -236,8 +236,8 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-24 10:40:33',
-           'departure' => '2019-12-24 16:30:33',
+           'entry' => '2020-01-05 10:40:33',
+           'departure' => '2020-01-05 16:30:33',
            'date' => '2019-12-24',
            'profile_teacher_id' => 4,
            'school_id' => 2,
@@ -246,8 +246,8 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-25 10:00:33',
-           'departure' => '2019-12-25 16:00:33',
+           'entry' => '2020-01-06 10:00:33',
+           'departure' => '2020-01-06 16:00:33',
            'date' => '2019-12-25',
            'profile_teacher_id' => 1,
            'school_id' => 1,
@@ -256,8 +256,8 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-25 11:00:33',
-           'departure' => '2019-12-25 16:30:33',
+           'entry' => '2020-01-06 11:00:33',
+           'departure' => '2020-01-06 16:30:33',
            'date' => '2019-12-25',
            'profile_teacher_id' => 2,
            'school_id' => 1,
@@ -266,8 +266,8 @@ class SampleData extends Seeder
         ]);
         DB::table('attendances')->insert([
            //'id' => 1,
-           'entry' => '2019-12-25 10:30:33',
-           'departure' => '2019-12-25 17:30:33',
+           'entry' => '2020-01-06 10:30:33',
+           'departure' => '2020-01-06 17:30:33',
            'date' => '2019-12-25',
            'profile_teacher_id' => 4,
            'school_id' => 2,

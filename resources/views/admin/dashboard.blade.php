@@ -21,56 +21,54 @@
     <div class="col-sm-12">
         <div class="card-group">
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/admin/panel/school/index">
+                <a href="/admin/panel/attendance/present">
                     <div class="card-block">
-                        <h2 class="stat-card-number">{{$stats['total_schools'] ?? ''}}</h2>
+                        <h2 class="stat-card-number">{{$stats['present_percentage'] ?? ''}} %</h2>
                         <div class="stat-card-icon">
                             <i class="icofont icofont-university"></i>
                         </div>
-                        <span class="stat-card-name">Total - Schools </span>
-                    </div>
-                </a>
-            </div>
-            <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/admin/panel/teacher/index">
-                    <div class="card-block">
-                        <h2 class="stat-card-number">{{$stats['total_teachers'] ?? ''}}</h2>
-                        <div class="stat-card-icon">
-                            <i class="icofont icofont-teacher"></i>
-                        </div>
-                        <span class="stat-card-name">Total Teachers</span>
-                    </div>
-                </a>
-            </div>
-            <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/admin/panel/attendance/present">
-                    <div class="card-block">
-                        <h2 class="stat-card-number">{{$stats['present_today'] ?? ''}}</h2>
-                        <div class="stat-card-icon">
-                            <i class="icofont icofont-hand"></i>
-                        </div>
-                        <span class="stat-card-name">Present - Today </span>
+                        <span class="stat-card-name">Present Percentage</span>
                     </div>
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
                 <a href="/admin/panel/attendance/absent">
                     <div class="card-block">
-                        <h2 class="stat-card-number">{{$stats['absent_today'] ?? ''}}</h2>
+                        <h2 class="stat-card-number">{{$stats['absent_percentage'] ?? ''}} %</h2>
                         <div class="stat-card-icon">
-                            <i class="icofont icofont-not-allowed"></i>
+                            <i class="icofont icofont-teacher"></i>
                         </div>
-                        <span class="stat-card-name">Absent - Today </span>
+                        <span class="stat-card-name">Absent Percentage</span>
                     </div>
                 </a>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
+                <div class="card-block">
+                    <h2 class="stat-card-number">{{$stats['on_leaves'] ?? ''}}</h2>
+                    <div class="stat-card-icon">
+                        <i class="icofont icofont-hand"></i>
+                    </div>
+                    <span class="stat-card-name">On Leave</span>
+                </div>
+            </div>
+            <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
+                <div class="card-block">
+                    <h2 class="stat-card-number">{{$stats['late_arrivals'] ?? ''}}</h2>
+                    <div class="stat-card-icon">
+                        <i class="icofont icofont-not-allowed"></i>
+                    </div>
+                    <span class="stat-card-name">Late Arrival</span>
+                </div>
             </div>            
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
                 <div class="card-block">
-                    <h2 class="stat-card-number">{{$stats['present_percentage'] ?? ''}} %</h2>
+                    <h2 class="stat-card-number">{{$stats['early_departures'] ?? ''}}</h2>
                     <div class="stat-card-icon">
                         <i class="icofont icofont-people"></i>
                     </div>
-                    <span class="stat-card-name">Present Percentage</span>
+                    <span class="stat-card-name">Early Departure</span>
                 </div>
             </div>
         </div>

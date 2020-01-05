@@ -24,7 +24,6 @@
                             </td> 
                             <td>
                                 <div class="text-nowrap">
-
                                     @if($panel=='teacher')
                                         {{$teacher->school->name ?? ''}}
                                     @else
