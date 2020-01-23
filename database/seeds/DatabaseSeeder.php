@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        /*DB::statement('SET FOREIGN_KEY_CHECKS=0');
 
         DB::table('schools')->truncate();
         DB::table('unions')->truncate();
@@ -41,23 +41,11 @@ class DatabaseSeeder extends Seeder
         $this->call(SentinelDpeoSeeder::class);
         $this->call(SentinelAdpeoSeeder::class);
         $this->call(SentinelTeoSeeder::class);
-        $this->call(SentinelAteoSeeder::class);
+        $this->call(SentinelAteoSeeder::class);*/
         //$this->call(SampleData::class);
-       
-        /*
-        DB::table('users')->truncate();
-        DB::table('role_users')->truncate();
-        DB::table('roles')->truncate();
-
-        $this->call(SentinelRoleSeeder::class);
-        $this->call(SentinelAdminSeeder::class);
-
-        DB::table('schools')->truncate();
-        DB::table('profile_teachers')->truncate();
-        DB::table('schools')->truncate();*/
 
         $this->call(SadarUnionSeeder::class);
-        $this->call(AmarkhanaUnionSeeder::class);
+        /*$this->call(AmarkhanaUnionSeeder::class);
         $this->call(ChaklahatUnionSeeder::class);
         $this->call(DhakkamaraUnionSeeder::class);
         $this->call(GarinabariUnionSeeder::class);
@@ -69,7 +57,7 @@ class DatabaseSeeder extends Seeder
 
         $this->command->info('All seeder seeded!');
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');*/
 
         Model::reguard();
     }

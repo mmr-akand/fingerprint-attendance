@@ -11,7 +11,7 @@ class SadarUnionSeeder extends Seeder
 
     public function run()
     {
-        $name = 'Jagdal Sardar Para Government Primary School';
+        /*$name = 'Jagdal Sardar Para Government Primary School';
         $address = 'Sardar Para, Panchagarh Sadar, Panchagarh';
         $code = '99101041306';
         $data = [
@@ -90,6 +90,17 @@ class SadarUnionSeeder extends Seeder
             ['Anjuman Ara Asha', '913040007', '01715210346'],
             ['Md. Nurujjaman', '913040008', '01723590670'],
             ['Israt Jahan', '913040009', '01760579040']
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);*/
+
+        $name = 'Karotoya Adarsha Shiksha Niketan Govt. Primary School';
+        $address = 'Dokropara, Panchagarh';
+        $code = '99101041302';
+        $data = [
+            ['Md. Rashedul Alam Sarker', '994130201', '01715143832'],
+            ['Md. Mokbulur Rahman', '994130202', '01977757157'],
+            ['Ramendra Chandra Paul', '994130203', '01732055849'],
+            ['Mst. Kahinur Aktar', '994130204', '01782907439']
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
 
