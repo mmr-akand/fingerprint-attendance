@@ -5,9 +5,9 @@ use App\TeacherProfile as Tchr;
 use App\School;
 use App\User;
 
-class HafizabadUnionSeeder extends Seeder
+class PorosovaSeeder extends Seeder
 {
-    const HAFIZABAD = 6;
+    const POROSOVA = 11;
     /**
      * Run the database seeds.
      *
@@ -15,13 +15,16 @@ class HafizabadUnionSeeder extends Seeder
      */
     public function run()
     {        
-        $name = '';
-        $address = '';
-        $code = '';
+        $name = 'Karotoya Adarsha Shiksha Niketan Govt. Primary School';
+        $address = 'Dokropara, Panchagarh';
+        $code = '99101041302';
         $data = [
-
+            ['Md. Rashedul Alam Sarker', '994130201', '01715143832'],
+            ['Md. Mokbulur Rahman', '994130202', '01977757157'],
+            ['Ramendra Chandra Paul', '994130203', '01732055849'],
+            ['Mst. Kahinur Aktar', '994130204', '01782907439']
         ];
-        //$this->storeSchoolAndTeachers($name, $address, $code, $data);
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
@@ -34,7 +37,7 @@ class HafizabadUnionSeeder extends Seeder
            'name' => $name,
            'address' => $address,
            'deviceid' => $code,
-           'union_id' => self::HAFIZABAD,
+           'union_id' => self::POROSOVA,
            'upazila_id' => 1,
            'profile_teo_id' => 1
         ]);

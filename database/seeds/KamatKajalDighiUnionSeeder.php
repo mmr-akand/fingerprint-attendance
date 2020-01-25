@@ -161,10 +161,25 @@ class KamatKajalDighiUnionSeeder extends Seeder
             ['Sanjita', '991040005', '01738517944'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Ghatbar Government Primary School';
+        $address = 'Ghatbar, Kamat Kajal Dhighi, Panchagarh.';
+        $code = '99101040402';
+        $data = [
+            ['Md. Khademul Islam', '994020001', '01724677229'],
+            ['Md.Nazrul Islam', '994020002', '01717546327'],
+            ['Arati Rani', '994020003', '01856586012'],
+            ['Mst. Nurjahan Prodhen', '994020004', '01738002127'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     {       
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+         
         $school = School::create([
            'name' => $name,
            'address' => $address,

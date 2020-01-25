@@ -175,10 +175,37 @@ class HaribhasaUnionSeeder extends Seeder
             ['Arifatul Shilpi', '997050005', '017********'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Jotdebijadu Government Primary School';
+        $address = 'Jotdebijadu, Harivasha, Panchagarh.';
+        $code = '91101040706';
+        $data = [
+            ['Ummay Salma', '917060001', '01736584298'],
+            ['Shahida Akter', '917060002', '01*********'],
+            ['Zillur Rahman', '917060003', '01751153061'],
+            ['Rukhsana Akter', '917060004', '01737562337'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Danga Para Government Primary School';
+        $address = 'Danga Para, Harivasha, Panchagarh.';
+        $code = '91101040707';
+        $data = [
+            ['Md. Nuruzzaman', '917070001', '01718942738'],
+            ['Md. Abdul Kayum', '917070002', '01729617150'],
+            ['Subarna Sultana', '917070003', '01767221797'],
+            ['Afroza Begum', '917070004', '01735883437'],
+            ['Md. Abdus Salam', '917070005', '01731285572'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     {       
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+         
         $school = School::create([
            'name' => $name,
            'address' => $address,

@@ -94,10 +94,36 @@ class SatmaraUnionSeeder extends Seeder
             ['Shahanara Akter', '996100005', '01737530683'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Sotorong Para Government Primary School';
+        $address = 'Sotorong Para, Satmara, Panchagarh.';
+        $code = '99101040608';
+        $data = [
+            ['Md. Alab Uddin', '996080001', '01771398029'],
+            ['Moriam Jamila', '996080002', '01716148615'],
+            ['Most. Sharmin Akter', '996080003', '01783212462'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Velku Para Government Primary School';
+        $address = 'Velku Para, Satmara, Panchagarh.';
+        $code = '99101040609';
+        $data = [
+            ['Kazi Md. Tariqul Alam', '996090001', '01715023400'],
+            ['Md. Zahid Hossain', '996090002', '01314152606'],
+            ['Md. Akhter-Ud-Zaman', '996090003', '01717749074'],
+            ['Md. Ahsanul Kabir Sazib', '996090004', '01750002080'],
+            ['Md. Mostofa Kamal', '996090005', '01712150303'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
-    {       
+    {     
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+           
         $school = School::create([
            'name' => $name,
            'address' => $address,

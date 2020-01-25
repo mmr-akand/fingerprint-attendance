@@ -44,5 +44,6 @@ class DivisionDistrictThanaUnionSeeder extends Seeder
         DB::table('unions')->insert(['id' => 8, 'name' => 'Kamat Kajal Dighi', 'upazila_id' => 1]);
         DB::table('unions')->insert(['id' => 9, 'name' => 'Magura', 'upazila_id' => 1]);
         DB::table('unions')->insert(['id' => 10, 'name' => 'Satmara', 'upazila_id' => 1]);
+        DB::table('unions')->insert(['id' => 11, 'name' => 'Porosova', 'upazila_id' => 1]);
     }
 }

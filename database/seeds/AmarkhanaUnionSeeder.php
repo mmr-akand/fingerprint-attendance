@@ -28,19 +28,36 @@ class AmarkhanaUnionSeeder extends Seeder
         $address = 'Bodinajot, Amorkhana, Panchagarh';
         $code = '91101040106';
         $data = [
-			['Shahneaj Begum', '911060001', '01714910503'],
-			['Anjuman Ara', '911060002', '01725976355'],
-			['Trishnika Sing', '911060003', '01717544974'],
-			['Mst. Asma Khatun', '911060004', '01722357339'],
-			['Umma Mahbuba', '911060005', '01743322000'],
-			['Nipa Roy', '911060006', '01725872564'],
-			['Ripa Akhtar', '911060007', '01773853141']
+            ['Shahneaj Begum', '911060001', '01714910503'],
+            ['Anjuman Ara', '911060002', '01725976355'],
+            ['Trishnika Sing', '911060003', '01717544974'],
+            ['Mst. Asma Khatun', '911060004', '01722357339'],
+            ['Umma Mahbuba', '911060005', '01743322000'],
+            ['Nipa Roy', '911060006', '01725872564'],
+            ['Ripa Akhtar', '911060007', '01773853141']
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Dawrikamary-1 Government Primary School';
+        $address = 'Dangapara, Amorkhana, Panchagarh.';
+        $code = '91101040105';
+        $data = [
+            ['Most. Mahfuza Hossain', '911050001', '01716266870'],
+            ['Mst. Mokseda Khatun', '911050002', '01752066675'],
+            ['Most. Afroza Begum', '911050003', '01770870141'],
+            ['Wahida Akhter', '911050004', '01717545570'],
+            ['Rupom Chandra Barman', '911050005', '01740169057'],
+            ['Nadira Sultana', '911050006', '01768889068'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
-    {       
+    {  
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+              
         $school = School::create([
            'name' => $name,
            'address' => $address,

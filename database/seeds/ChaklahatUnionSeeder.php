@@ -140,10 +140,38 @@ class ChaklahatUnionSeeder extends Seeder
             ['Shahanj Begum', '995050004', '01755461250']
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Vandarugram Government Primary School';
+        $address = 'Vandarugram, Chakla Hat, Panchagarh.';
+        $code = '91101040506';
+        $data = [
+            ['Md. Harun-Ur-Rashid', '915060001', '01718658432'],
+            ['Monira Akther', '915060002', '01737681096'],
+            ['Md. Karamot Ali', '915060003', '01714448708'],
+            ['Musammat Shewly Khatoon', '915060004', '01770905421'],
+            ['Rafat Mostary', '915060005', '01713776280'],
+            ['Md. MoRedwanul Karim Basunia', '915060006', '01723741579'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Narayanpur Government Primary School';
+        $address = 'Narayanpur, Chakla Hat, Panchagarh.';
+        $code = '91101040504';
+        $data = [
+            ['Mst. Farida Yeasmin Amin', '915040001', '01724393811'],
+            ['Md. Montazul Haque', '915040002', '01737347652'],
+            ['Fatema Khanum Rotna', '915040003', '01797963963'],
+            ['Mukta Rani Roy', '915040004', '01737602644'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
-    {       
+    {    
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+            
         $school = School::create([
            'name' => $name,
            'address' => $address,

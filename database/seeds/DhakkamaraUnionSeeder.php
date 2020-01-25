@@ -239,10 +239,43 @@ class DhakkamaraUnionSeeder extends Seeder
             ['Md. Mortuza Ali', '998110005', '01744252050'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        
+        $name = 'Burirban Government Primary School';
+        $address = 'Burirban, Dhakkamara, Panchagarh.';
+        $code = '99701049301';
+        $data = [
+            ['A.T.M. Samsozzoha', '493010001', '01731171042'],
+            ['Jharan Chandra Roy', '493010002', '01722262235'],
+            ['Bonita Rani', '493010003', '01707475302'],
+            ['Shampa Rani Roy', '493010004', '01770876896'],
+            ['Rekha Rani', '493010005', '01757864555'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        
+        $name = 'Khola Para Government Primary School';
+        $address = 'Kholapara, Dhakkamara, Panchagarh.';
+        $code = '91101040807';
+        $data = [
+            ['Mohammad Kawsar Alam', '918070001', '01740575066'],
+            ['Mst. Badrun Nehar', '918070002', '01718789930'],
+            ['Mst. Tahera Begum', '918070003', '01784940362'],
+            ['Ismu Tara', '918070004', '01304620924'],
+            ['Jesmira Begum', '918070005', '01704343400'],
+            ['Mst. Mamtaz Begum', '918070006', '01317177723'],
+            ['Mst. Marufa Yeasmin', '918070007', '01767571493'],
+            ['Mst. Umme Kulsum', '918070008', '01740259436'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     {       
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+         
         $school = School::create([
            'name' => $name,
            'address' => $address,

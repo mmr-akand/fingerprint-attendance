@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
         //$this->call(SampleData::class);
 
         $this->call(SadarUnionSeeder::class);
-        /*$this->call(AmarkhanaUnionSeeder::class);
+        $this->call(AmarkhanaUnionSeeder::class);
         $this->call(ChaklahatUnionSeeder::class);
         $this->call(DhakkamaraUnionSeeder::class);
         $this->call(GarinabariUnionSeeder::class);
@@ -54,10 +54,11 @@ class DatabaseSeeder extends Seeder
         $this->call(KamatKajalDighiUnionSeeder::class);
         $this->call(MaguraUnionSeeder::class);
         $this->call(SatmaraUnionSeeder::class);
+        $this->call(PorosovaSeeder::class);
 
         $this->command->info('All seeder seeded!');
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');*/
+        /*DB::statement('SET FOREIGN_KEY_CHECKS=1');*/
 
         Model::reguard();
     }

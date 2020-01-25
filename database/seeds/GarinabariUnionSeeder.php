@@ -121,7 +121,11 @@ class GarinabariUnionSeeder extends Seeder
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
-    {       
+    { 
+        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        if($school)
+            return;
+               
         $school = School::create([
            'name' => $name,
            'address' => $address,
