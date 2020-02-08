@@ -2,11 +2,20 @@
     <div class="col-sm-12">
         <div class="row">
             <div class="col-md-12">
+                @if(Sentinel::getUser()->phone == 'superadmin')
+                    <div class="text-right">
+                        <a href="/{{$panel}}/panel/school/{{$school->id}}/edit" class="btn btn-primary">Edit School</a>
+                    </div>
+                @endif
                 <div class="mb-4">
                     <ul class="list-inline mb-0">
                         <li>
                             <span><b>School Name:</b></span>
                             <span>{{$school->name ?? ''}}</span>
+                        </li>
+                        <li>
+                            <span><b>School Code:</b></span>
+                            <span>{{$school->deviceid ?? ''}}</span>
                         </li>
                         <li>
                             <span><b>School Address:</b></span>
@@ -29,6 +38,7 @@
                         <th>Designation</th>
                         <th>Phone Number</th>
                         <th>Attendance Code</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody> 
@@ -61,6 +71,14 @@
                             <td>
                                 <div class="text-nowrap">
                                     {{$teacher->enrollid ?? ''}}
+                                </div>
+                            </td>  
+                            <td>
+                                <div class="text-nowrap">
+                                    <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/{{$teacher->id}}" class="btn btn-primary">Show</a>
+                                    @if(Sentinel::getUser()->phone == 'superadmin')
+                                        <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/{{$teacher->id}}/edit" class="btn btn-primary">Edit</a>
+                                    @endif
                                 </div>
                             </td>           
                         </tr>

@@ -36,15 +36,15 @@ class DatabaseSeeder extends Seeder
         DB::table('roles')->truncate();
 
         $this->call(DivisionDistrictThanaUnionSeeder::class);
-        $this->call(SentinelRoleSeeder::class);
+        $this->call(SentinelRoleSeeder::class);*/
         $this->call(SentinelAdminSeeder::class);
-        $this->call(SentinelDpeoSeeder::class);
+        /*$this->call(SentinelDpeoSeeder::class);
         $this->call(SentinelAdpeoSeeder::class);
         $this->call(SentinelTeoSeeder::class);
         $this->call(SentinelAteoSeeder::class);*/
         //$this->call(SampleData::class);
 
-        $this->call(SadarUnionSeeder::class);
+        /*$this->call(SadarUnionSeeder::class);
         $this->call(AmarkhanaUnionSeeder::class);
         $this->call(ChaklahatUnionSeeder::class);
         $this->call(DhakkamaraUnionSeeder::class);
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
         $this->call(KamatKajalDighiUnionSeeder::class);
         $this->call(MaguraUnionSeeder::class);
         $this->call(SatmaraUnionSeeder::class);
-        $this->call(PorosovaSeeder::class);
+        $this->call(PorosovaSeeder::class);*/
 
         $this->command->info('All seeder seeded!');
 

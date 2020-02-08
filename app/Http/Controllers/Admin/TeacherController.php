@@ -37,13 +37,48 @@ class TeacherController extends Controller
     }
 
     public function show(School $school, TeacherProfile $teacher)
-    {    	
-    	$data = [
-    		'title' => 'Teacher Information',
-    		'school' => $school,
-    		'teacher' => $teacher
-    	];
+    {       
+        $data = [
+            'title' => 'Teacher Information',
+            'panel' => 'admin',
+            'school' => $school,
+            'teacher' => $teacher
+        ];
 
-    	return view('admin.teacher.show', $data);
+        return view('admin.teacher.show', $data);
+    }
+
+    public function edit(School $school, TeacherProfile $teacher)
+    {       
+        $data = [
+            'title' => 'Teacher Information',
+            'panel' => 'admin',
+            'school' => $school,
+            'teacher' => $teacher
+        ];
+
+        return view('admin.teacher.edit', $data);
+    }
+
+    public function update(Request $request, School $school, TeacherProfile $teacher)
+    {     
+        $teacher->enrollid = $request->enrollid;
+        $teacher->save();
+
+        $teacher->user->name = $request->name;
+        $teacher->user->phone = $request->phone;
+        $teacher->user->save();
+
+        $data = [
+            'title' => 'Teacher Information',
+            'panel' => 'admin',
+            'school' => $school,
+            'teacher' => $teacher
+        ];
+
+        $notification = ['success', 'Teacher successfully updated'];
+        session()->flash('message', $notification);
+        
+        return redirect('/admin/panel/school/'.$school->id.'/teacher/'.$teacher->id.'/edit');
     }
 }

@@ -9,6 +9,7 @@
                         <th>School Code</th>
                         <th>Number of Teachers</th>
                         <th>Pourosova/Union Name</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody> 
@@ -37,6 +38,14 @@
                             <td>
                                 <div class="text-nowrap">
                                     {{$school->union->name ?? ''}}
+                                </div>
+                            </td> 
+                            <td>
+                                <div class="text-nowrap">
+                                    @if(Sentinel::getUser()->phone == 'superadmin')
+                                        <a href="/{{$panel}}/panel/school/{{$school->id}}/edit" class="btn btn-primary">Edit</a>
+                                    @endif
+                                    <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/index" class="btn btn-primary">Teachers</a>
                                 </div>
                             </td>          
                         </tr>
