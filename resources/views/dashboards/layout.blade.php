@@ -44,12 +44,22 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P58GJH3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar navbar-base fixed-top navbar-expand-md navbar-light -is-mobile">
+        <div class="search-box-mobile">
+            <form class="" method="POST" enctype="multipart/form-data" action="/search-teacher" >
+                {{ csrf_field() }}
+                <input class="form-control" type="text" name="ref_no" placeholder="Teacher Name / Attendance Code" autocomplete="off">
+            </form>
+            <button type="button" class="btn btn-searchbox-close"><i class="icofont icofont-close"></i></button>
+        </div>
 
         <div class="navbar-header">
             <button type="button" class="btn nav-toggle-btn navbar-toggle-left aside-toggler d-block d-md-none">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-header-actions">   
+                <button type="button" class="btn btn-search-mobile">
+                    <i class="icofont icofont-ui-search"></i>
+                </button>
                 <button type="button" class="btn nav-toggle-btn nav-more-toggle-btn d-block d-md-none" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false" aria-controls="navbar-collapse-mobile">
                     <i class="ion-more"></i>
                 </button>
@@ -76,6 +86,18 @@
                     <a href="#" role="button" class="aside-toggler nav-link">
                         <span class="navbar-toggler-icon"></span>
                     </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item search">
+                  <i class="icofont icofont-ui-search"></i> &nbsp;
+                </li>
+                <li class="nav-item search-bar searchbar-desktop">
+                    <form class="" method="POST" enctype="multipart/form-data" action="/search-teacher" >
+                        {{ csrf_field() }}
+                        <input class="form-control" type="text" name="ref_no" placeholder="Teacher Name / Attendance Code" autocomplete="off">
+                    </form>
                 </li>
             </ul>
 

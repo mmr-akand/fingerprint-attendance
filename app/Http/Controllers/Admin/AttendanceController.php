@@ -14,7 +14,7 @@ class AttendanceController extends Controller
     	$attendances = Attendance::where('date', date("Y-m-d"))->get();
 
     	$data = [
-            'title' => 'Attendance - Present',
+            'title' => 'Present',
     		'panel' => 'admin',
     		'attendances' => $attendances
     	];
@@ -29,11 +29,37 @@ class AttendanceController extends Controller
         $absent_teachers = TeacherProfile::whereNotIn('id', $attendance_ids)->get();
 
     	$data = [
-    		'title' => 'Attendance - Absent',
+    		'title' => 'Absent',
             'panel' => 'admin',
     		'absent_teachers' => $absent_teachers
     	];
 
     	return view('admin.attendance.absent', $data);
+    }
+
+    public function lateArrival()
+    {
+        $attendances = Attendance::where('date', date("Y-m-d"))->whereTime('entry', '>', '10:00:00')->get();
+
+        $data = [
+            'title' => 'Late Arrival',
+            'panel' => 'admin',
+            'attendances' => $attendances
+        ];
+
+        return view('admin.attendance.index', $data);
+    }
+
+    public function earlyDeparture()
+    {
+        $attendances = Attendance::where('date', date("Y-m-d"))->whereTime('departure', '<', '17:00:00')->get();
+
+        $data = [
+            'title' => 'Early Departure',
+            'panel' => 'admin',
+            'attendances' => $attendances
+        ];
+
+        return view('admin.attendance.index', $data);
     }
 }

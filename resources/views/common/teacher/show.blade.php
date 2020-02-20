@@ -75,6 +75,30 @@
                                         <div class="col-md-8">
                                             <div class="dd-text">{{$teacher->school->union->name ?? ''}}</div>
                                         </div>
+                                    </div>
+                                    <div class="row dd-item">
+                                        <div class="col-md-4">
+                                            <div class="dd-name">Today Entry Time</div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            @if(isset($attendance->entry))
+                                                <div class="dd-text">{{date('g:i A', strtotime($attendance->entry))}}</div>
+                                            @else
+                                                <div class="dd-text">&nbsp;</div>
+                                            @endif
+                                        </div>
+                                    </div>  
+                                    <div class="row dd-item">
+                                        <div class="col-md-4">
+                                            <div class="dd-name">Today Departure Time</div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            @if(isset($attendance->departure))
+                                                <div class="dd-text">{{date('g:i A', strtotime($attendance->departure))}}</div>
+                                            @else
+                                                <div class="dd-text">&nbsp;</div>
+                                            @endif
+                                        </div>
                                     </div>                                   
                                 </div>
                             </div>

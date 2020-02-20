@@ -37,6 +37,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'sentinel-auth:super-admin'],
         Route::post('school/{school}/teacher/{teacher}/edit', 'Admin\TeacherController@update');
         Route::get('attendance/present', 'Admin\AttendanceController@index');
         Route::get('attendance/absent', 'Admin\AttendanceController@absent');
+        Route::get('attendance/late-arrival', 'Admin\AttendanceController@lateArrival');
+        Route::get('attendance/early-departure', 'Admin\AttendanceController@earlyDeparture');
     });
 });
 
@@ -104,6 +106,8 @@ Route::group(['prefix' => 'teacher', 'middleware' => 'sentinel-auth:teacher'], f
         Route::get('attendance/absent', 'Teacher\AttendanceController@absent');
     });
 });
+
+Route::post('/search-teacher', 'SessionController@searchTeacher');
 
 Route::get('/unauthorized', function () {
     return view('errors.401');

@@ -25,7 +25,7 @@
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['present_percentage'] ?? ''}} %</h2>
                         <div class="stat-card-icon">
-                            <i class="icofont icofont-university"></i>
+                            <i class="icofont icofont-people"></i>
                         </div>
                         <span class="stat-card-name">Present Percentage</span>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['absent_percentage'] ?? ''}} %</h2>
                         <div class="stat-card-icon">
-                            <i class="icofont icofont-teacher"></i>
+                            <i class="icofont icofont-not-allowed"></i>
                         </div>
                         <span class="stat-card-name">Absent Percentage</span>
                     </div>
@@ -45,31 +45,37 @@
         </div>
         <div class="card-group">
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <div class="card-block">
-                    <h2 class="stat-card-number">{{$stats['on_leaves'] ?? ''}}</h2>
-                    <div class="stat-card-icon">
-                        <i class="icofont icofont-hand"></i>
+                <a href="/admin/panel/attendance/absent">
+                    <div class="card-block">
+                        <h2 class="stat-card-number">{{$stats['on_leaves'] ?? ''}}</h2>
+                        <div class="stat-card-icon">
+                            <i class="icofont icofont-gift"></i>
+                        </div>
+                        <span class="stat-card-name">On Leave</span>
                     </div>
-                    <span class="stat-card-name">On Leave</span>
-                </div>
+                </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <div class="card-block">
-                    <h2 class="stat-card-number">{{$stats['late_arrivals'] ?? ''}}</h2>
-                    <div class="stat-card-icon">
-                        <i class="icofont icofont-not-allowed"></i>
+                <a href="/admin/panel/attendance/late-arrival">
+                    <div class="card-block">
+                        <h2 class="stat-card-number">{{$stats['late_arrivals'] ?? ''}}</h2>
+                        <div class="stat-card-icon">
+                            <i class="icofont icofont-database-add"></i>
+                        </div>
+                        <span class="stat-card-name">Late Arrival</span>
                     </div>
-                    <span class="stat-card-name">Late Arrival</span>
-                </div>
+                </a>
             </div>            
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <div class="card-block">
-                    <h2 class="stat-card-number">{{$stats['early_departures'] ?? ''}}</h2>
-                    <div class="stat-card-icon">
-                        <i class="icofont icofont-people"></i>
+                <a href="/admin/panel/attendance/early-departure">
+                    <div class="card-block">
+                        <h2 class="stat-card-number">{{$stats['early_departures'] ?? ''}}</h2>
+                        <div class="stat-card-icon">
+                            <i class="icofont icofont-database-remove"></i>
+                        </div>
+                        <span class="stat-card-name">Early Departure</span>
                     </div>
-                    <span class="stat-card-name">Early Departure</span>
-                </div>
+                </a>
             </div>
         </div>
 

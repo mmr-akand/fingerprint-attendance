@@ -7,6 +7,7 @@ use Sentinel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\MyLibrary\UserLib\Login\DashboardLogin;
+use App\TeacherProfile;
 
 class SessionController extends Controller
 {
@@ -95,5 +96,34 @@ class SessionController extends Controller
         }
 
         return $dashboard;
+    }
+
+    public function searchTeacher(Request $request)
+    {
+        $this->validate($request, [
+            'ref_no' => 'required'
+        ]);
+
+        $teacher = TeacherProfile::where('enrollid', $request->ref_no)->first();
+
+        if(is_null($teacher)){
+            $user = User::where('name', 'like', '%' . $request->ref_no . '%')->first();
+            
+            $teacher = $user->teacherProfile;
+        }
+
+        $school = $teacher->school;
+
+        $logeedInUser = Sentinel::getUser();
+
+        if ($logeedInUser->adminProfile) {
+            $panel = 'admin';
+        } elseif ($logeedInUser->ateoProfile) {
+            $panel = 'ateo';
+        } elseif ($logeedInUser->teacherProfile) {
+            $panel = 'teacher';
+        }
+
+        return redirect('/'.$panel.'/panel/school/'.$school->id.'/teacher/'.$teacher->id);
     }
 }
