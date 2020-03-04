@@ -52,7 +52,7 @@ class AttendanceController extends Controller
 
     public function earlyDeparture()
     {
-        $attendances = Attendance::where('date', date("Y-m-d"))->whereTime('departure', '<', '17:00:00')->get();
+        $attendances = Attendance::where('date', date("Y-m-d"))->whereTime('departure', '<', '16:00:00')->get();
 
         $data = [
             'title' => 'Early Departure',
