@@ -222,6 +222,18 @@ class MaguraUnionSeeder extends Seeder
             ['Mst. Habiba Khanam', '919060006', '01734444145'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Islampur Government Primary School';
+        $address = 'Islampur, Magura, Panchagarh.';
+        $code = '99701049202';
+        $data = [
+            ['Mrs. Anar Koli Mirza', '994920201', '01714514488'],
+            ['Mst. Laily Khatun', '994920202', '01738659244'],
+            ['Most. Salina parvin', '994920203', '01788844002'],
+            ['Afroza Mirza', '994920204', '01717320728'],
+            ['Most. Salina Akter', '994920205', '01743809755'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)

@@ -118,6 +118,66 @@ class GarinabariUnionSeeder extends Seeder
             ['Most. Nurjahan Begum', '991007005', '01737891733'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Thatpara Government Primary School';
+        $address = 'Thatpara, Gorinabari, Panchagarh Sadar, Panchagarh.';
+        $code = '91101041004';
+        $data = [
+            ['Mst. Sabina Yesmin', '911004001', '01750513413'],
+            ['Most. Sharmin Akter', '911004002', '01738279774'],
+            ['Mahmuda Begum Kalpna', '911004003', '01722069479'],
+            ['Most. Suity Begum', '911004004', '01707435497'],
+            ['Most. Hamida Akhter Banu', '911004005', '01738514978'],
+            ['Amina Khatun', '911004006', '01736233224'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Sadarpara Government Primary School';
+        $address = 'Sadarpara, Gorinabari, Panchagarh.';
+        $code = '99101041009';
+        $data = [
+            ['Md. Shahidul Islam', '991009001', '01722729043'],
+            ['Md. Nazrul Islam', '991009002', '01770827104'],
+            ['Md. Mobarak Ali', '991009003', '01737550441'],
+            ['Mst. Rumina Akter', '991009004', '01723343409'],
+            ['Md. Golam Mostafa', '991009005', '01744632885'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Mohulagoj Government Primary School';
+        $address = 'Mohulagoj, Gorinabari, Panchagarh.';
+        $code = '99101041004';
+        $data = [
+            ['Md. Abdul Haque', '991004001', '01746963008'],
+            ['Sudhir Chandra Barman', '991004002', '01737586692'],
+            ['Sudhir Chandra Pal', '991004003', '01751222397'],
+            ['Priti Kana Biswas', '991004004', '01726180265'],
+            ['Md. LMafidul Islam', '991004005', '01713813994'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Matigara Government Primary School';
+        $address = 'Matigara, Gorina Bari, Panchagarh.';
+        $code = '99101041005';
+        $data = [
+            ['Md. Khademul Islam', '991005001', '01731244614'],
+            ['Hera Bala', '991005002', '01738039060'],
+            ['Mst. Sufia Begum', '991005003', '01735262842'],
+            ['Mst. Moslima Khatun', '991005004', '01717759017'],
+            ['Md. Mizanur Rahman', '991005005', '01738030107'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
+        
+        $name = 'Jodderpara Government Primary School';
+        $address = 'Jodderpara, Gorina Bari, Panchagarh.';
+        $code = '99101041001';
+        $data = [
+            ['Md. Ahasan Habib', '991001001', '01713783861'],
+            ['Md. Abdul Matin', '991001002', '01780746395'],
+            ['Md. Abu Salah', '991001003', '01751152596'],
+            ['Khudiram Borman', '991001004', '01719389099'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)

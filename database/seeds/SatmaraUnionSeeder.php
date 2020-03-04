@@ -116,6 +116,17 @@ class SatmaraUnionSeeder extends Seeder
             ['Md. Mostofa Kamal', '996090005', '01712150303'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Laltugach Government Primary School';
+        $address = 'Laltugach, Satmara, Panchagarh.';
+        $code = '99101040607';
+        $data = [
+            ['Md. Khalilur Rahman', '996070001', '01739262861'],
+            ['Md. Afser Ali', '996070002', '01773790387'],
+            ['Md. Rafiqul Islam', '996070003', '01744525142'],
+            ['Most. Selina Begum', '996070004', '01743740561'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
