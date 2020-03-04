@@ -226,7 +226,7 @@ class MaguraUnionSeeder extends Seeder
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     {      
-        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        $school = School::where('deviceid', $code)->first();
         if($school)
             return;
           

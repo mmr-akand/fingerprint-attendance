@@ -15,13 +15,13 @@ class DhakkamaraUnionSeeder extends Seeder
         $address = 'Komolapur, Dhakkamara, Panchagarh';
         $code = '91101040804';
         $data = [
-['Mst. Aktari Banu', '918040001', '01716669364'],
-['Shamima Akhter', '918040002', '01854907467'],
-['Most. Mozida Pervin', '918040003', '01746009382'],
-['Mst. Khaleda Begum', '918040004', '01738172284'],
-['Mst. Tasmin Nuri', '918040005', '01710215392'],
-['Most. Arefa Siddika', '918040006', '01717888084'],
-['Farjana Sultana', '918040007', '01725301962'],
+            ['Mst. Aktari Banu', '918040001', '01716669364'],
+            ['Shamima Akhter', '918040002', '01854907467'],
+            ['Most. Mozida Pervin', '918040003', '01746009382'],
+            ['Mst. Khaleda Begum', '918040004', '01738172284'],
+            ['Mst. Tasmin Nuri', '918040005', '01710215392'],
+            ['Most. Arefa Siddika', '918040006', '01717888084'],
+            ['Farjana Sultana', '918040007', '01725301962'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
 
@@ -272,7 +272,7 @@ class DhakkamaraUnionSeeder extends Seeder
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     {       
-        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        $school = School::where('deviceid', $code)->first();
         if($school)
             return;
          

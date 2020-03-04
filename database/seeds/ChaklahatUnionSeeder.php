@@ -164,11 +164,24 @@ class ChaklahatUnionSeeder extends Seeder
             ['Mukta Rani Roy', '915040004', '01737602644'],
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Rotnibari Government Primary School';
+        $address = 'Rotnibari, Chakla Hat, Panchagarh.';
+        $code = '91101040505';
+        $data = [
+            ['Md. Golam Robbani', '915050001', '01771398373'],
+            ['Md. Sohidul Islam', '915050002', '01763232852'],
+            ['Most. Bulbuli Begum', '915050003', '01964122780'],
+            ['Salina Yesmin', '915050004', '01744453409'],
+            ['Anjumanara Begum', '915050005', '01785450789'],
+            ['Shamima-Dil-Afroj', '915050006', '01*********'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     {    
-        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        $school = School::where('deviceid', $code)->first();
         if($school)
             return;
             

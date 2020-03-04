@@ -25,11 +25,23 @@ class PorosovaSeeder extends Seeder
             ['Mst. Kahinur Aktar', '994130204', '01782907439']
         ];
         $this->storeSchoolAndTeachers($name, $address, $code, $data);
+
+        $name = 'Mithapuqur Government Primary School';
+        $address = 'Mithapuqur, Word-01, Porosova Panchagarh.';
+        $code = '99101041202';
+        $data = [
+            ['Md. Moksed Ali', '992020001', '01727960093'],
+            ['Khursid Zahan', '992020002', '01796834807'],
+            ['Rabeya Sultana', '992020003', '01719749378'],
+            ['Khadija Parvin', '992020004', '01717271044'],
+            ['Baby Akther', '992020005', '01737467581'],
+        ];
+        $this->storeSchoolAndTeachers($name, $address, $code, $data);
     }
 
     public function storeSchoolAndTeachers($name, $address, $code, $data)
     { 
-        $school = School::where('name', $name)->where('deviceid', $code)->first();
+        $school = School::where('deviceid', $code)->first();
         if($school)
             return;
                
