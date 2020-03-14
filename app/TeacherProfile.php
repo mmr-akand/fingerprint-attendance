@@ -13,9 +13,7 @@ class TeacherProfile extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'school_id', 'user_id', 'is_head_teacher', 'about', 
-    ];
+    protected $guarded = [];
 
     
     public function user()

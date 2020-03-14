@@ -13,9 +13,7 @@ class School extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'upazila_id', 'profile_teo_id', 'profile_ateo_id', 'name',
-    ];
+    protected $guarded = [];
 
     public function teachers()
     {

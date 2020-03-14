@@ -15,7 +15,7 @@ $unions = Union::get();
         </ul>
     </li> 
 
-    <li class="aside-nav-item {{ Request::is('dpeo/panel/school/index*') ? 'active' : '' }}"><a href="/dpeo/panel/school/index"><i class="icofont icofont-university"></i> <span class="nav-text">All Schools</span> </a></li>
+    <!-- <li class="aside-nav-item {{ Request::is('dpeo/panel/school/index*') ? 'active' : '' }}"><a href="/dpeo/panel/school/index"><i class="icofont icofont-university"></i> <span class="nav-text">All Schools</span> </a></li> -->
 
     <!-- <li class="aside-nav-item {{ Request::is('dpeo/panel/teacher*') ? 'active' : '' }}"><a href="/dpeo/panel/teacher/index"><i class="icofont icofont-teacher"></i> <span class="nav-text">All Teachers</span> </a></li> -->
 
