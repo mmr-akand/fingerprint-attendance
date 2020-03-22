@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="table-default has-datatable table-large table-responsive table-round table-td-vmiddle">
-            <table id="driver-payments-table" class="table" width="100%" cellspacing="0">
+            <table id="" class="table" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>ID</th>

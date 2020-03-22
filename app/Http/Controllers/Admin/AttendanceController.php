@@ -9,14 +9,34 @@ use App\TeacherProfile;
 
 class AttendanceController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-    	$attendances = Attendance::where('date', date("Y-m-d"))->get();
+        $parameters = [];
+        $appends = [];
+
+        if ($request->dateFrom) {
+            $dateFrom = $request->dateFrom;
+        } else {
+            $dateFrom = date('Y-m-d');
+        }
+        $parameters [] = ['date', '>=', $dateFrom];
+        $appends['dateFrom'] = $dateFrom;
+
+        if ($request->dateTo) {
+            $dateTo = $request->dateTo;
+        } else {
+            $dateTo = date('Y-m-d');
+        }
+        $parameters [] = ['date', '<=', $dateTo];
+        $appends['dateTo'] = $dateTo;
+
+    	$attendances = Attendance::where($parameters)->paginate(2);
 
     	$data = [
             'title' => 'Present',
     		'panel' => 'admin',
-    		'attendances' => $attendances
+    		'attendances' => $attendances,
+            'appends'=>$appends
     	];
 
     	return view('admin.attendance.index', $data);
