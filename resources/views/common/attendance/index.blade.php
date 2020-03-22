@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="pl-4">
-                        <input class="form-control from-date" type="text" name="dateFrom" value="{{$appends['dateFrom']}}">
+                        <input class="form-control from-date" type="text" name="dateFrom" value="{{$appends['dateFrom']}}" autocomplete="off">
                     </div>
                 </div>
                 <div class="col-md-1 text-center">
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="pl-4">
-                        <input class="form-control to-date" type="text" name="dateTo" value="{{$appends['dateTo']}}">
+                        <input class="form-control to-date" type="text" name="dateTo" value="{{$appends['dateTo']}}" autocomplete="off">
                     </div>
                 </div>
                 <div class="col-md-3">
