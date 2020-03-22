@@ -30,7 +30,7 @@ class AttendanceController extends Controller
         $parameters [] = ['date', '<=', $dateTo];
         $appends['dateTo'] = $dateTo;
 
-    	$attendances = Attendance::where($parameters)->paginate(2);
+    	$attendances = Attendance::where($parameters)->paginate(15);
 
     	$data = [
             'title' => 'Present',
