@@ -4,7 +4,7 @@ namespace App\MyLibrary\DashboardLib;
 
 class DashboardManager
 {
-	protected function reformStats($schools, $teachers, $attendances, $late_arrivals=FALSE, $early_departures=FALSE)
+	protected function reformStats($schools, $teachers, $attendances, $late_arrivals=[], $early_departures=[])
 	{
 		$total_schools = count($schools);
 		$total_teachers = count($teachers);

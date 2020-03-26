@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\School;
 use App\TeacherProfile;
+use App\Attendance;
 use Sentinel;
 
 class TeacherController extends Controller
@@ -30,10 +31,14 @@ class TeacherController extends Controller
 
     public function show(School $school, TeacherProfile $teacher)
     {       
+        $attendance = Attendance::where('date', date("Y-m-d"))->where('profile_teacher_id', $teacher->id)->first();
+
         $data = [
             'title' => 'Teacher Information',
+            'panel' => 'teacher',
             'school' => $school,
-            'teacher' => $teacher
+            'teacher' => $teacher,
+            'attendance' => $attendance,
         ];
 
         return view('teacher.teacher.show', $data);

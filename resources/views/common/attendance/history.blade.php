@@ -8,14 +8,16 @@
                             <span><b>Teacher Name:</b></span>
                             <span><a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/{{$teacher->id}}">{{$teacher->user->name ?? ''}}</a></span>
                         </li>
-                        <li>
-                            <span><b>School Name:</b></span>
-                            <span><a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/index">{{$school->name ?? ''}}</a></span>
-                        </li>
-                        <li>
-                            <span><b>Pourosova/Union Name:</b></span>
-                            <span><a href="/{{$panel}}/panel/union/{{$school->union->id}}/school">{{$school->union->name ?? ''}}</a></span>
-                        </li>
+                        @if($panel != 'teacher')
+                            <li>
+                                <span><b>School Name:</b></span>
+                                <span><a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/index">{{$school->name ?? ''}}</a></span>
+                            </li>
+                            <li>
+                                <span><b>Pourosova/Union Name:</b></span>
+                                <span><a href="/{{$panel}}/panel/union/{{$school->union->id}}/school">{{$school->union->name ?? ''}}</a></span>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>

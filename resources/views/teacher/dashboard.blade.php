@@ -20,7 +20,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="card-group">
-            <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
+            <!-- <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
                 <a href="/teacher/panel/school/index">
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['total_schools'] ?? ''}}</h2>
@@ -30,7 +30,7 @@
                         <span class="stat-card-name">Total - Schools </span>
                     </div>
                 </a>
-            </div>
+            </div> -->
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
                 <a href="/teacher/panel/teacher/index">
                     <div class="card-block">
@@ -43,7 +43,7 @@
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/teacher/panel/attendance/index">
+                <a href="/teacher/panel/attendance/present">
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['present_today'] ?? ''}}</h2>
                         <div class="stat-card-icon">
@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class="card card-site card-lg card-statistics text-center mb-4 booking-cards">
-                <a href="/customer/panel/bookings?filter=completed">
+                <a href="/teacher/panel/attendance/absent">
                     <div class="card-block">
                         <h2 class="stat-card-number">{{$stats['absent_today'] ?? ''}}</h2>
                         <div class="stat-card-icon">

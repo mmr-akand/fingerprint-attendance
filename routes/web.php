@@ -107,6 +107,7 @@ Route::group(['prefix' => 'teacher', 'middleware' => 'sentinel-auth:teacher'], f
         Route::get('teacher/index', 'Teacher\TeacherController@index');
         //Route::get('school/{school}/teacher/index', 'Teacher\TeacherController@teacherBySchool');
         Route::get('school/{school}/teacher/{teacher}', 'Teacher\TeacherController@show');
+        Route::get('school/{school}/teacher/{teacher}/history', 'Teacher\AttendanceController@history');
         Route::get('attendance/present', 'Teacher\AttendanceController@index');
         Route::get('attendance/absent', 'Teacher\AttendanceController@absent');
     });

@@ -16,7 +16,9 @@
                                     @if(Sentinel::getUser()->phone == 'superadmin')
                                         <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/{{$teacher->id}}/edit" class="btn btn-primary">Edit</a>
                                     @endif
-                                    <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/index" class="btn btn-primary">Teacher List</a>
+                                    @if($panel != 'teacher')
+                                        <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/index" class="btn btn-primary">Teacher List</a>
+                                    @endif
                                 </div>
                             </div>                            
                         </div>
