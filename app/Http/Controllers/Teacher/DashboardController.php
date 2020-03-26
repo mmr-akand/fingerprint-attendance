@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Teacher;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\MyLibrary\DashboardLib\TeacherDashboard;
+use Sentinel;
 
 class DashboardController extends Controller
 {
@@ -14,8 +15,12 @@ class DashboardController extends Controller
 
     	$stats = $dashboard->stats();
 
+        $user = Sentinel::getUser();
+
+        $school = $user->teacherProfile->school;
+
     	$data = [
-    		'title' => 'Dashboard',
+    		'title' => $school->name,
     		'stats' => $stats,
     	];
 
