@@ -12,6 +12,7 @@
                             </div>
                             <div class="offset-md-2 col-md-5">
                                 <div class="pl-4 text-right">
+                                    <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/{{$teacher->id}}/history" class="btn btn-primary">History</a>
                                     @if(Sentinel::getUser()->phone == 'superadmin')
                                         <a href="/{{$panel}}/panel/school/{{$school->id}}/teacher/{{$teacher->id}}/edit" class="btn btn-primary">Edit</a>
                                     @endif

@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-2">
                     <div class="pl-4">
-                        <a class="btn btn-success" href="/{{$panel}}/panel/attendance/present">Refresh</a>
+                        <a class="form-control btn btn-success" href="/{{$panel}}/panel/attendance/present">Refresh</a>
                     </div>
                 </div>
             </div>
