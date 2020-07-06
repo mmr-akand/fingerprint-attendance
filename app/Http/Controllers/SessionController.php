@@ -126,4 +126,10 @@ class SessionController extends Controller
 
         return redirect('/'.$panel.'/panel/school/'.$school->id.'/teacher/'.$teacher->id);
     }
+
+
+    public function snapshotTest(Request $request)
+    {
+        \Log::info($request->all());
+    }
 }

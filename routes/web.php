@@ -14,6 +14,8 @@
 Route::get('/', 'SessionController@create');
 Route::post('/', 'SessionController@store');
 
+Route::post('/snapshot-test', 'SessionController@snapshotTest');
+
 //Route::get('/admin/dashboard', 'LoginController@dashboard');
 
 Route::group(['prefix' => 'session'], function() {
