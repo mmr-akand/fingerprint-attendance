@@ -42,7 +42,14 @@ class DatabaseSeeder extends Seeder
         $this->call(SentinelAdpeoSeeder::class);
         $this->call(SentinelTeoSeeder::class);
         $this->call(SentinelAteoSeeder::class);*/
-        //$this->call(SampleData::class);
+        
+        // $this->call(DivisionDistrictThanaUnionSeeder::class);
+        // $this->call(SentinelRoleSeeder::class);
+        // $this->call(SentinelAdminSeeder::class);
+        $this->call(SentinelDpeoSeeder::class);
+        $this->call(SentinelAdpeoSeeder::class);
+        $this->call(SentinelTeoSeeder::class);
+        $this->call(SentinelAteoSeeder::class);
 
         $this->call(SadarUnionSeeder::class);
         $this->call(AmarkhanaUnionSeeder::class);

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\School;
 use App\Union;
+use App\TeacherProfile;
+use App\User;
 
 class SchoolController extends Controller
 {
@@ -92,5 +94,18 @@ class SchoolController extends Controller
         session()->flash('message', $notification);
         
         return redirect('/admin/panel/school/'.$school->id.'/edit');
+    }
+
+    public function delete(School $school)
+    {
+        $userIds = $school->teachers->pluck('user_id')->toArray();
+
+        TeacherProfile::whereIn('id', $school->teachers->pluck('id')->toArray())->delete();
+        User::whereIn('id', $userIds)->delete();
+        $school->delete();
+
+        $notification = ['success', 'School successfully deleted'];
+        session()->flash('message', $notification);
+        return redirect('/admin/panel/dashboard');
     }
 }

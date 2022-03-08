@@ -62,7 +62,7 @@
                         <div class="stat-card-icon">
                             <i class="icofont icofont-database-add"></i>
                         </div>
-                        <span class="stat-card-name">Late Arrival</span>
+                        <span class="stat-card-name">Late Arrival (After 10 AM)</span>
                     </div>
                 </a>
             </div>            
@@ -73,7 +73,7 @@
                         <div class="stat-card-icon">
                             <i class="icofont icofont-database-remove"></i>
                         </div>
-                        <span class="stat-card-name">Early Departure</span>
+                        <span class="stat-card-name">Early Departure (Before 4 PM)</span>
                     </div>
                 </a>
             </div>

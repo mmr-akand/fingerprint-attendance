@@ -5,6 +5,9 @@
                 @if(Sentinel::getUser()->phone == 'superadmin')
                     <div class="text-right">
                         <a href="/{{$panel}}/panel/school/{{$school->id}}/edit" class="btn btn-primary">Edit School</a>
+                    </div><br>
+                    <div class="text-right">
+                        <a href="/{{$panel}}/panel/school/{{$school->id}}/delete" class="btn btn-danger" onclick="return ConfirmDelete();">Delete School</a>
                     </div>
                 @endif
                 <div class="mb-4">
@@ -89,3 +92,13 @@
         </div>
     </div>
 </div>
+<script>
+    function ConfirmDelete()
+    {
+      var delCheck = confirm("Do you really want to delete this school?");
+      if(delCheck)
+        return true;
+      else
+        return false;
+    }
+</script>

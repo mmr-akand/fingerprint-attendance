@@ -79,7 +79,7 @@ class AttendanceController extends Controller
             'attendances' => $attendances
         ];
 
-        return view('admin.attendance.index', $data);
+        return view('admin.attendance.late_arrival', $data);
     }
 
     public function earlyDeparture()
@@ -92,7 +92,7 @@ class AttendanceController extends Controller
             'attendances' => $attendances
         ];
 
-        return view('admin.attendance.index', $data);
+        return view('admin.attendance.early_departure', $data);
     }
 
     public function history(School $school, TeacherProfile $teacher)

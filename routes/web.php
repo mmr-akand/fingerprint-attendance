@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'sentinel-auth:super-admin'],
         Route::get('school/index', 'Admin\SchoolController@index');
         Route::get('school/{school}/edit', 'Admin\SchoolController@edit');
         Route::post('school/{school}/edit', 'Admin\SchoolController@update');
+        Route::get('school/{school}/delete', 'Admin\SchoolController@delete');
         Route::get('union/{union}/school', 'Admin\SchoolController@schoolByUnion');
         Route::get('union/{union}/school/create', 'Admin\SchoolController@create');
         Route::post('school/store', 'Admin\SchoolController@store');
