@@ -142,6 +142,18 @@ class TeacherController extends Controller
         return view('admin.teacher.edit', $data);
     }
 
+    public function delete(School $school, TeacherProfile $teacher)
+    {
+        $user = $teacher->user;
+        Attendance::where('profile_teacher_id', $teacher->id)->delete();
+        $teacher->delete();
+        $user->delete();
+
+        $notification = ['success', 'Teacher successfully deleted'];
+        session()->flash('message', $notification);
+        return redirect('/admin/panel/school/' . $school->id . '/teacher/index');
+    }
+
     public function update(Request $request, School $school, TeacherProfile $teacher)
     {     
         $teacher->enrollid = $request->enrollid;

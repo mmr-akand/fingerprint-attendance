@@ -3,10 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 @if(Sentinel::getUser()->phone == 'superadmin')
-                    <div class="text-right">
+                    <div class="pl-4 text-right">
                         <a href="/{{$panel}}/panel/school/{{$school->id}}/edit" class="btn btn-primary">Edit School</a>
-                    </div><br>
-                    <div class="text-right">
                         <a href="/{{$panel}}/panel/school/{{$school->id}}/delete" class="btn btn-danger" onclick="return ConfirmDelete();">Delete School</a>
                     </div>
                 @endif

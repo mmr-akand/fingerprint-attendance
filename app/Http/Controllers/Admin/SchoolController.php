@@ -8,6 +8,7 @@ use App\School;
 use App\Union;
 use App\TeacherProfile;
 use App\User;
+use App\Attendance;
 
 class SchoolController extends Controller
 {
@@ -100,6 +101,7 @@ class SchoolController extends Controller
     {
         $userIds = $school->teachers->pluck('user_id')->toArray();
 
+        Attendance::where('school_id', $school->id)->delete();
         TeacherProfile::whereIn('id', $school->teachers->pluck('id')->toArray())->delete();
         User::whereIn('id', $userIds)->delete();
         $school->delete();
